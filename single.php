@@ -12,12 +12,21 @@
 
                                     <header class="entry-header">
                                         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                                        <div class="entry-meta">
+                                        <div class="entry-meta" style="justify-content:space-between; display:inline-flex">
+                                        <!-- ---get category--- -->
+                                            <?php
+                                            $category = get_the_category();
+                                            if (!empty($category)) {
+                                                echo '<a href="' . esc_url(get_category_link($category[0]->term_id)) . '" class="category-badge">' . esc_html($category[0]->name) . '</a>';
+                                            }
+                                            ?>
+                                            <ul class="meta list-inline mb-0 px-1"></ul>
                                             <?php
                                             echo 'Posted on ' . get_the_date() . ' by ' . get_the_author();
                                             ?>
                                         </div>
                                     </header>
+                                    <hr style="margin-bottom: 1%;margin-top: 1%;">
 
                                     <div class="entry-content">
                                         <?php the_content(); ?>
@@ -37,7 +46,7 @@
                                     
                         </main><!-- .site-main -->
                     </div><!-- .content-area -->
-                    <div class="sidebar padding-10 rounded bordered"><?php get_sidebar(); ?></div>
+                    
                 </div>     
             </div>                               
 </section>

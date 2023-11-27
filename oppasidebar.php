@@ -1,11 +1,11 @@
 
 <!-- right part starts from here  -->
 
-<div class="col-lg-3">
+<div class="col-lg-3" style="margin-right: 0.5%; margin-left: 0.5%;">
 
 <div class="oppasidebar">
 
-    <div class="widget rounded">
+    <!-- <div class="widget rounded">
         <div class="widget-about text-center">
             <div class="oppahub">
                 <span contenteditable="true">Oppa</span>
@@ -36,6 +36,84 @@
                     <a href="#"><i class="far fa-envelope"></i></a>
                 </li>
             </ul>
+        </div>
+    </div> -->
+    <div class="widget rounded">
+        <div class="widget-header text-center">
+            <h3 class="widget-title">Suggested Posts</h3>
+        </div>
+        <div class="widget-content">
+            <div class="post-carousel-widget">
+
+                <div class="post post-carousel">
+                    <div class="thumb rounded">
+                        <a href="#" class="category-badge position-absolute">Suggested Posts</a>
+                        <a href="#">
+                            <div class="inner">
+                                <img src="images/posts/wid-1.jpg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <h5 class="post-title mb-0 mt-4">
+                        <a href="#">10 Things to do for being safe of corona</a>
+                    </h5>
+                    <ul class="meta list-inline mt-2 mb-0">
+                        <li class="list-inline-item">
+                            <a href="#">OppaHub</a>
+                        </li>
+                        <li class="list-inline-item">29 March 2023</li>
+                    </ul>
+                </div>
+                <div class="post post-carousel">
+                    <div class="thumb rounded">
+                        <a href="#" class="category-badge position-absolute">COVID-19</a>
+                        <a href="#">
+                            <div class="inner">
+                                <img src="images/posts/wid-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <h5 class="post-title mb-0 mt-4">
+                        <a href="#">Wash your hands after certain interval of time.</a>
+                    </h5>
+                    <ul class="meta list-inline mt-2 mb-0">
+                        <li class="list-inline-item">
+                            <a href="#">OppaHub</a>
+                        </li>
+                        <li class="list-inline-item">29 March 2023</li>
+                    </ul>
+                </div>
+                <div class="post post-carousel">
+                    <div class="thumb rounded">
+                        <a href="#" class="category-badge position-absolute">COVID-19</a>
+                        <a href="#">
+                            <div class="inner">
+                                <img src="images/posts/wid-3.jpg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <h5 class="post-title mb-0 mt-4">
+                        <a href="#">Get vaccinated to stop the chain of corona</a>
+                    </h5>
+                    <ul class="meta list-inline mt-2 mb-0">
+                        <li class="list-inline-item">
+                            <a href="#">OppaHub</a>
+                        </li>
+                        <li class="list-inline-item">29 March 2023</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slick-arrows-bot">
+                <buttton class="carousel-botNav-prev slick-custom-buttons" type="button"
+                    data-role="none" aria-label="Previous">
+                    <i class="icon-arrow-left"></i>
+                </buttton>
+                <buttton class="carousel-botNav-next slick-custom-buttons" type="button"
+                    data-role="none" aria-label="Next">
+                    <i class="icon-arrow-right"></i>
+                </buttton>
+            </div>
+
         </div>
     </div>
 
@@ -155,84 +233,7 @@
         </div>
     </div>
 
-    <div class="widget rounded">
-        <div class="widget-header text-center">
-            <h3 class="widget-title">COVID-19</h3>
-        </div>
-        <div class="widget-content">
-            <div class="post-carousel-widget">
-
-                <div class="post post-carousel">
-                    <div class="thumb rounded">
-                        <a href="#" class="category-badge position-absolute">COVID-19</a>
-                        <a href="#">
-                            <div class="inner">
-                                <img src="images/posts/wid-1.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <h5 class="post-title mb-0 mt-4">
-                        <a href="#">10 Things to do for being safe of corona</a>
-                    </h5>
-                    <ul class="meta list-inline mt-2 mb-0">
-                        <li class="list-inline-item">
-                            <a href="#">OppaHub</a>
-                        </li>
-                        <li class="list-inline-item">29 March 2023</li>
-                    </ul>
-                </div>
-                <div class="post post-carousel">
-                    <div class="thumb rounded">
-                        <a href="#" class="category-badge position-absolute">COVID-19</a>
-                        <a href="#">
-                            <div class="inner">
-                                <img src="images/posts/wid-2.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <h5 class="post-title mb-0 mt-4">
-                        <a href="#">Wash your hands after certain interval of time.</a>
-                    </h5>
-                    <ul class="meta list-inline mt-2 mb-0">
-                        <li class="list-inline-item">
-                            <a href="#">OppaHub</a>
-                        </li>
-                        <li class="list-inline-item">29 March 2023</li>
-                    </ul>
-                </div>
-                <div class="post post-carousel">
-                    <div class="thumb rounded">
-                        <a href="#" class="category-badge position-absolute">COVID-19</a>
-                        <a href="#">
-                            <div class="inner">
-                                <img src="images/posts/wid-3.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <h5 class="post-title mb-0 mt-4">
-                        <a href="#">Get vaccinated to stop the chain of corona</a>
-                    </h5>
-                    <ul class="meta list-inline mt-2 mb-0">
-                        <li class="list-inline-item">
-                            <a href="#">OppaHub</a>
-                        </li>
-                        <li class="list-inline-item">29 March 2023</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="slick-arrows-bot">
-                <buttton class="carousel-botNav-prev slick-custom-buttons" type="button"
-                    data-role="none" aria-label="Previous">
-                    <i class="icon-arrow-left"></i>
-                </buttton>
-                <buttton class="carousel-botNav-next slick-custom-buttons" type="button"
-                    data-role="none" aria-label="Next">
-                    <i class="icon-arrow-right"></i>
-                </buttton>
-            </div>
-
-        </div>
-    </div>
+    
 
 
     <div class="widget rounded">

@@ -15,7 +15,7 @@ $current_category = get_queried_object();
         </div>
 
         <!-- ---posts line--- -->
-        <div class="bigchunk" style="margin-top: 2px;">
+        <div class="bigchunk" style="margin-top: 2px; padding-left:0; padding-right:0;">
             <div class="row padding-10 rounded bordered" style="display: block;">
 
                 <!-- Display posts from the current category -->
