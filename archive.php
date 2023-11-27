@@ -26,11 +26,11 @@ $current_category = get_queried_object();
                     'posts_per_page' => -1,
                 );
                 
-                $query = new WP_Query($args);
-                
-                if ($query->have_posts()) :
-                    while ($query->have_posts()) : $query->the_post();
-                ?>
+                    $query = new WP_Query($args);
+                    
+                    if ($query->have_posts()) :
+                        while ($query->have_posts()) : $query->the_post();
+                    ?>
 
                     <!-- Your post HTML structure goes here -->
                     <div class="col-md-12 col-sm-6" style="width:100%; padding-left:0px;padding-right:0px;">
