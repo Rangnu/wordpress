@@ -53,6 +53,7 @@ h1, h3, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 590;
     line-height: 1.4;
+    /* h5 is for post titles */
 }
 
 h2 {
@@ -1129,10 +1130,14 @@ section {
 .section-title {
     display: flex;
     justify-content: space-between;
-    font-size: 25px;
+    font-size: 29px;
     padding-left: 10px;
     margin: 0;
+    color: #000000 ;
+    text-shadow: 1.5px 2px #95fdfd;
+    font-weight: 790;
 }
+
 
 
 

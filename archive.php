@@ -68,36 +68,6 @@ $current_category = get_queried_object();
                                         <?php the_title(); ?>
                                     </a>
                                 </h5>
-
-
-                                <!-- <div class="post-bottom clearfix d-flex align-items-center" style=" margin-top: 2px;">
-                                    <div class="social-share me-auto">
-                                        <button class="toggle-button icon-share"></button>
-                                        <ul class="icons list-unstyled list-inline mb-0">
-                                            <li class="list-inline-item">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#"><i class="fab fa-pinterest"></i></a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#"><i class="far fa-envelope"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="more-button float-end">
-                                        <a href="#"><span class="icon-options"></span></a>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
