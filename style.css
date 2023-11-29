@@ -817,16 +817,16 @@ section {
     display: inline-block;
     background-color: #ad1deb;
     border-radius: 50%;
-    margin-left: 1rem;
+    margin-left: 0.3rem;
     height: 3px;
     vertical-align: middle;
     position: relative;
     top: -1px;
     width: 3px;
 }
-
+/* --page.php category - date font space control-- */
 .post .meta li:not(:last-child) {
-    margin-right: 0.8rem;
+    margin-right: 0.3rem;
 }
 
 /* ----hero main first post bigger space-- */
