@@ -30,7 +30,7 @@
                     </div>
 
                     <!-- navbar -->
-                    <div class="collapse navbar-collapse">
+                    <div class="collapse navbar-collapse" style="margin-left: 10px;">
                         <ul class="navbar-nav mr-auto">
 
                         <li class="nav-item dropdown active">

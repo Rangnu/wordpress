@@ -15,9 +15,14 @@ $child_categories = get_categories(array(
 <div class="container-xl mt-3">
     <div class="row gy-4">
 
-        <!-- ---'category-Latest Posts'--- -->
+        <!-- ---'category Posts'--- -->
         <div class="section-header" style="margin-top: 2rem;">
-            <h3 class="section-title"><?php single_post_title(); ?></h3>
+            <h3 class="section-title">
+                <a href="<?php echo get_category_link(get_cat_ID($current_page->post_name)); ?>">
+                    <?php single_post_title(); ?>
+                </a>
+            </h3>
+
         </div>
 
         <!-- Display child categories and posts within a single bigchunk -->
