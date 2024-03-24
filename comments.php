@@ -3,7 +3,7 @@ if ( post_password_required() ) {
     return;
 }
 ?>
-
+<hr style="margin-bottom: 1px;">
 <div id="comments" class="comments-area">
 
     <?php if ( have_comments() ) : ?>
@@ -40,6 +40,15 @@ if ( post_password_required() ) {
         <p class="no-comments">Comments are closed.</p>
     <?php endif; ?>
 
-    <?php comment_form(); ?>
+    <?php
+    // Output the comment form with custom modifications
+    comment_form( array(
+        'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+        'class_submit'  => 'submit-post-comment', // Add a custom class to the submit button
+        'title_reply'   => '', // Remove the default "Leave a Reply" title
+        'label_submit'  => 'Comment', // Change the submit button text
+        'submit_field'  => '<p class="comment-form-submit">%1$s %2$s</p>', // Modify the submit field structure
+    ) );
+    ?>
 
 </div><!-- #comments -->

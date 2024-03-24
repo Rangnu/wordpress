@@ -4,6 +4,14 @@ function oppahub_register_styles(){
     wp_enqueue_style('style-handle', get_stylesheet_uri());
 
 }
+add_action('wep_enqueue_scripts', 'oppahub_register_styles');
+
+//search
+function theme_setup() {
+    add_theme_support('html5', array('search-form'));
+}
+add_action('after_setup_theme', 'theme_setup');
+
 
 function load_css()
 {
@@ -15,7 +23,13 @@ function load_css()
     wp_enqueue_style('style');
 
 }
+add_action('wep_enqueue_scripts', 'load_css');
 
+function handle_custom_post_submission() {
+    // Your post handling logic here
+}
+
+add_action('admin_post_custom_post_submission', 'handle_custom_post_submission');
 
 $categories = get_the_category();
 
@@ -30,8 +44,7 @@ $excerpt = substr( $excerpt, 0, 260 ); // Only display first 260 characters of e
 $result = substr( $excerpt, 0, strrpos( $excerpt, ' ' ) );
 echo $result;
 // -----------------------
-
+remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
 add_theme_support( 'post-thumbnails' );
-add_action('wep_enqueue_scripts', 'load_css');
-add_action('wep_enqueue_scripts', 'oppahub_register_styles');
+
 ?>

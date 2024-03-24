@@ -89,7 +89,7 @@ $(function(){
         bottomSpacing : 30,
         containerSelector : '.main-content',
     });
-    $(".submenu").before('<i class="icon-arrow-down switch"></i>');
+    $(".submenu").before('<i class="fa-solid fa-chevron-down switch"></i>');
     $(".vertical-menu li i.switch").on('click', function() {
     var $submenu = $(this).next(".submenu");
     $submenu.slideToggle(300);
@@ -130,6 +130,36 @@ $(function(){
             $(".lds-dual-ring").removeClass("loading");
         }, 500);
     });
+
+    $(document).ready(function() {
+        // Bind click event to tab links
+        $('a[data-bs-toggle="tab"]').on('click', function(e) {
+            // Prevent the default action of the anchor tag
+            e.preventDefault();
+            
+            // Add loading effect to tab pane and loader
+            $(".tab-pane").addClass("loading");
+            $(".lds-dual-ring").addClass("loading");
+            
+            // Get the target tab pane ID from the href attribute of the clicked tab link
+            var targetPaneId = $(this).attr("href");
+            
+            // Remove the "show" class from all tab panes except the target pane
+            $(".tab-pane").not(targetPaneId).removeClass("show");
+            
+            // Add the "show" class to the target tab pane after a delay
+            setTimeout(function() {
+                $(targetPaneId).addClass("show");
+                
+                // Remove loading effect after a delay
+                setTimeout(function () {
+                    $(".tab-pane").removeClass("loading");
+                    $(".lds-dual-ring").removeClass("loading");
+                }, 500); // Adjust the delay time as needed
+            }, 100); // Adjust the delay time as needed
+        });
+    });
+    
     // share toggle button 
     $(".post button.toggle-button").each(function() {
         $(this).on('click', function(e){

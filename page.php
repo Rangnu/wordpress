@@ -1,129 +1,56 @@
 <?php
-// Include the header
-get_header();
 
-// Get the current page information
-$current_page = get_queried_object();
-
-// Get the child categories of the current page using category slug
-$child_categories = get_categories(array(
-    'child_of' => get_cat_ID($current_page->post_name),
-));
-
+/*
+Template name : contact us
+*/
 ?>
 
-<div class="container-xl mt-3">
-    <div class="row gy-4">
 
-        <!-- ---'category Posts'--- -->
-        <div class="section-header" style="margin-top: 2rem;">
-            <h3 class="section-title">
-                <a href="<?php echo get_category_link(get_cat_ID($current_page->post_name)); ?>">
-                    <?php single_post_title(); ?>
-                </a>
-            </h3>
+<?php get_header(); ?>
+<section class="main-content">
+            <div class="container-xl">
+                <div class="row gy-4">
 
-        </div>
+                    <div id="primary" class="bigchunk"style="margin-top: 2.7rem; padding-left: 0; padding-right: 0;">
+                        <main id="main" class="padding-10 rounded bordered" style="width: 100%;">
 
-        <!-- Display child categories and posts within a single bigchunk -->
-        <?php
-        if ($child_categories) {
-            echo '<div class="bigchunk" style="display:block; margin-top: 2px; padding-left:0; padding-right:0;">';
+                            <?php while ( have_posts() ) : the_post(); ?>
 
-            // Display child categories and posts
-            $count = 0; // Counter to track child categories
-            foreach ($child_categories as $child_category) {
-                // Start a new row every 2 child categories
-                if ($count % 2 == 0) {
-                    if ($count > 0) {
-                        echo '</div>'; // Close the previous row
-                    }
-                    echo '<div class="row gy-4">'; // Start a new row
-                }
+                                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                echo '<div class="col-md-6">'; // Use col-md-6 for two child categories in a row
-                echo '<div class="row padding-10 rounded bordered" style="display: block;">';
-                echo '<h4 style="font-size: 25px; margin-bottom: 14px; margin-top: 14px;">';
-echo '<a href="' . get_category_link($child_category->term_id) . '">';
-echo $child_category->name;
-echo '<span class="category-arrow" style="float:right;">&gt;</span></a></h4>';
-
-
-                // Get posts from the child category
-                $args = array(
-                    'category__in' => $child_category->term_id,
-                    'posts_per_page' => 6,
-                );
-
-                $query = new WP_Query($args);
-
-                if ($query->have_posts()) {
-                    // Loop through posts and display them
-                    while ($query->have_posts()) {
-                        $query->the_post();
-                        ?>
-                        <hr style="margin-bottom: 1px; margin-top: 1px;"> <!-- Move the horizontal line above each post -->
-                        <div class="col-md-12 col-sm-6" style="width:100%; padding-left:0px; padding-right:0px;">
-                            <div class="post post-list clearfix" style="margin-bottom: 0px; display: flex; justify-content: space-between; align-items: center;">
-                                <div class="thumb rounded" style="flex:1;">
-                                    <a href="#">
-                                        <div class="inner">
-                                            <?php the_post_thumbnail(); ?> <!--line to display post thumbnail -->
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="details" style="flex:3; width:100%; padding-left: 0.7rem;">
-                                    <ul class="meta list-inline mb-0">
-                                        <li class="list-inline-item">
+                                    <header class="entry-header">
+                                        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                                        <div class="entry-meta" style="justify-content:space-between; display:inline-flex">
+                                        <!-- ---get category--- -->
                                             <?php
-                                            // Get the categories for the current post
-                                            $categories = get_the_category();
-
-                                            if ($categories) {
-                                                $category = $categories[0]; // Display only the first category
-                                            
-                                                echo '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
-                                                // You can add additional styling or separator here if needed
-                                            } else {
-                                                echo 'Uncategorized';
+                                            $category = get_the_category();
+                                            if (!empty($category)) {
+                                                echo '<a href="' . esc_url(get_category_link($category[0]->term_id)) . '" class="category-badge">' . esc_html($category[0]->slug) . '</a>';
                                             }
                                             ?>
-                                        </li>
+                                            <ul class="meta list-inline mb-0 px-1"></ul>
+                                            
+                                        </div>
+                                    </header>
+                                    <hr style="margin-bottom: 1%;margin-top: 1%;">
 
-                                        <li class="list-inline-item"><?php echo get_the_date(); ?></li>
-                                    </ul>
-                                    <h5 class="post-tile" style="margin-bottom: 1%;">
-                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                    wp_reset_postdata(); // Reset the post data
-                } else {
-                    echo '<p>No posts found in this category.</p>';
-                }
+                                    <div class="entry-content">
+                                        <?php the_content(); ?>
+                                    </div>
 
-                echo '</div>'; // Close the row
-                echo '</div>'; // Close the col-md-6
-                $count++;
-            }
+                                    <footer class="entry-footer">
+                                    </footer>
+                                    
+                                </article>
+                                    
+                            <?php endwhile; ?>
+                                    
+                        </main><!-- .site-main -->
+                    </div><!-- .content-area -->
+                    
+                </div>
+                     
+            </div>                               
+</section>
 
-            echo '</div>'; // Close the bigchunk
-        } else {
-            echo '<p>No child categories found for this page.</p>';
-        }
-        ?>
-
-        <div class="text-center">
-            <button class="btn btn-simple">Load More</button>
-        </div>
-
-    </div>
-</div>
-
-<?php
-// Include the footer
-get_footer();
-?>
+<?php get_footer(); ?>

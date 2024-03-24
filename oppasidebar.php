@@ -5,39 +5,6 @@
 
 <div class="oppasidebar">
 
-    <!-- <div class="widget rounded">
-        <div class="widget-about text-center">
-            <div class="oppahub">
-                <span contenteditable="true">Oppa</span>
-                <span contenteditable="true">Hub</span>
-            </div>
-            <p class="mb-4" style="text-align: justify;">This is Lorem ipsum dolor sit amet
-                consectetur adipisicing elit.
-                Dolores tempora accusantium culpa deleniti nesciunt repellat quisquam quos vero.
-                Esse itaque est optio nostrum porro quisquam nihil reprehenderit fugiat enim
-                non.</p>
-            <ul class="social-icons list-unstyled list-inline mb-0">
-                <li class="list-inline-item">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="far fa-envelope"></i></a>
-                </li>
-            </ul>
-        </div>
-    </div> -->
     <div class="widget rounded">
         <div class="widget-header text-center">
             <h3 class="widget-title">Suggested Posts</h3>
@@ -45,173 +12,114 @@
         <div class="widget-content">
             <div class="post-carousel-widget">
 
+                <?php
+                $args = array(
+                    'post_type'      => 'post',
+                    'posts_per_page' => 7,
+                    'orderby'        => 'rand', // Order by random
+                );
+
+                $query = new WP_Query($args);
+
+                while ($query->have_posts()) : $query->the_post();
+                ?>
+
                 <div class="post post-carousel">
                     <div class="thumb rounded">
-                        <a href="#" class="category-badge position-absolute">Suggested Posts</a>
-                        <a href="#">
-                            <div class="inner">
-                                <img src="images/posts/wid-1.jpg" alt="">
-                            </div>
+                        <a href="#" class="category-badge position-absolute">Suggested</a>
+                        <a href="<?php the_permalink(); ?>">
+                        <div class="inner">
+                            <?php
+                            if (has_post_thumbnail()) {
+                                // Output the post thumbnail with the additional class
+                                echo '<img src="' . esc_url(get_the_post_thumbnail_url(get_the_ID())) . '" alt="" class="post-image220">';
+                            } else {
+                                // You can add a default image if there is no featured image
+                                echo '<img src="' . get_template_directory_uri() . '/images/default-image.jpg" alt="" class="post-image220">';
+                            }
+                            ?>
+                        </div>
+
                         </a>
                     </div>
-                    <h5 class="post-title mb-0 mt-4">
-                        <a href="#">10 Things to do for being safe of corona</a>
+                    <h5 class="post-title mb-0 mt-2">
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </h5>
-                    <ul class="meta list-inline mt-2 mb-0">
+                    <ul class="meta list-inline mt-0 mb-2">
                         <li class="list-inline-item">
-                            <a href="#">OppaHub</a>
+                            <a href="#">Oppahub</a>
                         </li>
-                        <li class="list-inline-item">29 March 2023</li>
+                        <li class="list-inline-item"><?php the_date(); ?></li>
                     </ul>
                 </div>
-                <div class="post post-carousel">
-                    <div class="thumb rounded">
-                        <a href="#" class="category-badge position-absolute">COVID-19</a>
-                        <a href="#">
-                            <div class="inner">
-                                <img src="images/posts/wid-2.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <h5 class="post-title mb-0 mt-4">
-                        <a href="#">Wash your hands after certain interval of time.</a>
-                    </h5>
-                    <ul class="meta list-inline mt-2 mb-0">
-                        <li class="list-inline-item">
-                            <a href="#">OppaHub</a>
-                        </li>
-                        <li class="list-inline-item">29 March 2023</li>
-                    </ul>
-                </div>
-                <div class="post post-carousel">
-                    <div class="thumb rounded">
-                        <a href="#" class="category-badge position-absolute">COVID-19</a>
-                        <a href="#">
-                            <div class="inner">
-                                <img src="images/posts/wid-3.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <h5 class="post-title mb-0 mt-4">
-                        <a href="#">Get vaccinated to stop the chain of corona</a>
-                    </h5>
-                    <ul class="meta list-inline mt-2 mb-0">
-                        <li class="list-inline-item">
-                            <a href="#">OppaHub</a>
-                        </li>
-                        <li class="list-inline-item">29 March 2023</li>
-                    </ul>
-                </div>
+
+                <?php endwhile;
+                wp_reset_postdata();
+                ?>
+
             </div>
             <div class="slick-arrows-bot">
-                <buttton class="carousel-botNav-prev slick-custom-buttons" type="button"
-                    data-role="none" aria-label="Previous">
-                    <i class="icon-arrow-left"></i>
-                </buttton>
-                <buttton class="carousel-botNav-next slick-custom-buttons" type="button"
-                    data-role="none" aria-label="Next">
-                    <i class="icon-arrow-right"></i>
-                </buttton>
+                <button class="carousel-botNav-prev slick-custom-buttons" type="button" data-role="none"
+                    aria-label="Previous">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="carousel-botNav-next slick-custom-buttons" type="button" data-role="none"
+                    aria-label="Next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
             </div>
 
         </div>
     </div>
 
-    <div class="widget rounded">
+
+        <div class="widget rounded">
         <div class="widget-header text-center">
-            <h3 class="widget-title">Today's Hottest</h3>
+            <h3 class="widget-title">Maybe you'll like</h3>
         </div>
         <div class="widget-content">
-            <div class="post post-list-sm circle">
-                <div class="thumb circle rounded">
-                    <span class="number">1</span>
-                    <a href="#">
-                        <div class="inner">
-                            <img src="images/posts/tabs-1.jpg" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="details clearfix">
-                    <h6 class="post-title my-0">
-                        <a href="#">K-pop starts buying Bitcoin</a>
-                    </h6>
-                    <ul class="meta list-inline mt-1 mb-0">
-                        <li class="list-inline-item">30 May 2023</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="post post-list-sm circle rounded">
-                <div class="thumb circle">
-                    <span class="number">2</span>
-                    <a href="#">
-                        <div class="inner">
-                            <img src="images/posts/tabs-2.webp" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="details clearfix">
-                    <h6 class="post-title my-0">
-                        <a href="#">Jungkook said there are secrets on his tattoos</a>
-                    </h6>
-                    <ul class="meta list-inline mt-1 mb-0">
-                        <li class="list-inline-item">30 May 2023</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="post post-list-sm circle rounded">
-                <div class="thumb circle">
-                    <span class="number">3</span>
-                    <a href="#">
-                        <div class="inner">
-                            <img src="images/posts/tabs-3.jpg" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="details clearfix">
-                    <h6 class="post-title my-0">
-                        <a href="#">Check current Gold Price of 24k</a>
-                    </h6>
-                    <ul class="meta list-inline mt-1 mb-0">
-                        <li class="list-inline-item">30 May 2023</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="post post-list-sm circle">
-                <div class="thumb circle rounded">
-                    <span class="number">4</span>
-                    <a href="#">
-                        <div class="inner">
-                            <img src="images/posts/tabs-4.jpg" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="details clearfix">
-                    <h6 class="post-title my-0">
-                        <a href="#">Improve your mails with Grammarly</a>
-                    </h6>
-                    <ul class="meta list-inline mt-1 mb-0">
-                        <li class="list-inline-item">30 May 2023</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+            <?php
+            $args_random_posts = array(
+                'post_type'      => 'post',
+                'posts_per_page' => 8,
+                'orderby'        => 'rand', // Order by random
+            );
 
-    <div class="widget rounded">
-        <div class="widget-header text-center">
-            <h3 class="widget-title">Explore Topics</h3>
+            $query_random_posts = new WP_Query($args_random_posts);
+
+            while ($query_random_posts->have_posts()) : $query_random_posts->the_post();
+            ?>
+                <div class="post">
+                    <div class="thumb rounded">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="inner">
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    echo '<img src="' . esc_url(get_the_post_thumbnail_url(get_the_ID())) . '" alt="" class="post-image220">';
+                                } else {
+                                    echo '<img src="' . get_template_directory_uri() . '/images/default-image.jpg" alt="" class="post-image220">';
+                                }
+                                ?>
+                            </div>
+                        </a>
+                    </div>
+                    <h5 class="post-title mb-0 mt-1">
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </h5>
+                    <ul class="meta list-inline mt-0 mb-2">
+                        <li class="list-inline-item">
+                            <a href="#">Oppahub</a>
+                        </li>
+                        <li class="list-inline-item"><?php the_date(); ?></li>
+                    </ul>
+                </div>
+            <?php endwhile;
+            wp_reset_postdata();
+            ?>
         </div>
-        <div class="widget-content">
-            <ul class="list">
-                <li><a href="#">Trending</a><span>(7)</span></li>
-                <li><a href="#">Politics</a><span>(5)</span></li>
-                <li><a href="#">Fashion</a><span>(1)</span></li>
-                <li><a href="#">Lifestyle</a><span>(9)</span></li>
-                <li><a href="#">Inspiration</a><span>(2)</span></li>
-                <li><a href="#">Culture</a><span>(4)</span></li>
-            </ul>
-        </div>
-    </div>
+
+
+
 
     <div class="widget rounded">
         <div class="widget-header text-center">
@@ -228,7 +136,7 @@
 
             </form>
             <span class="newsletter-privacy text-center mt-3">
-                By signing up, you agree to our <a href="#">Privacy policy</a>
+                By signing up, you agree to our <a href="https://oppahub.com/privacypolicy/">Privacy policy</a>
             </span>
         </div>
     </div>
@@ -241,12 +149,12 @@
             <h3 class="widget-title">Tag Clouds</h3>
         </div>
         <div class="widget-content">
+            <a href="https://oppahub.com/news/" class="tag">#News</a>
+            <a href="https://oppahub.com/humor/" class="tag">#Humor</a>
+            <a href="https://oppahub.com/netflix/" class="tag">#Netflix</a>
+            <a href="https://oppahub.com/music/" class="tag">#Music</a>
+            <a href="https://oppahub.com/celeb/" class="tag">#Celeb</a>
             <a href="#" class="tag">#Trending</a>
-            <a href="#" class="tag">#Cooking</a>
-            <a href="#" class="tag">#Featured</a>
-            <a href="#" class="tag">#Beauty</a>
-            <a href="#" class="tag">#Finance</a>
-            <a href="#" class="tag">#Celebrities</a>
         </div>
     </div>
 </div>
