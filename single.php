@@ -74,14 +74,14 @@
 
                         <!-- Filter buttons -->
                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <button style="max-width: 150px;" type="button" class="btn btn-primary <?php echo $is_child_category ? '' : 'active'; ?>" onclick="window.location.href='<?php echo get_category_link($parent_category_id); ?>';">All</button>
+                            <button style="max-width: 150px;" type="button" class="btn btn-outline-dark <?php echo $is_child_category ? '' : 'active'; ?>" onclick="window.location.href='<?php echo get_category_link($parent_category_id); ?>';">All</button>
                             <?php 
                                 $child_categories = get_categories(array(
                                     'child_of' => $parent_category_id,
                                 ));
                                 foreach ($child_categories as $category) : 
                             ?>
-                                <button style="max-width: 150px;" type="button" class="btn btn-primary <?php echo $current_page->term_id == $category->term_id ? 'active' : ''; ?>" onclick="window.location.href='<?php echo get_category_link($category->term_id); ?>';"><?php echo $category->name; ?></button>
+                                <button style="max-width: 150px;" type="button" class="btn btn-outline-dark <?php echo $current_page->term_id == $category->term_id ? 'active' : ''; ?>" onclick="window.location.href='<?php echo get_category_link($category->term_id); ?>';"><?php echo $category->name; ?></button>
                             <?php endforeach; ?>
                         </div>
 
@@ -162,8 +162,8 @@
                         <?php endwhile; ?>
 
                         <div class="clearfix mb-3">
-                            <button class="btn btn-primary" style="float: left;">search</button>
-                            <button class="btn btn-primary" style="float: right;">post</button>
+                            <button class="btn btn-outline-dark" style="float: left;">search</button>
+                            <button class="btn btn-outline-dark" style="float: right;">post</button>
                         </div>
                         <!-- Pagination links -->
                         <div class="post" style="align-items: center;">
