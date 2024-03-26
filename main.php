@@ -13,8 +13,8 @@
                             <div class="padding-10 rounded bordered">
                                 <div class="section-header">
                                     <h3 class="section-title">
-                                        <a href="https://oppahub.com/news/">Oppa's News</a>
-                                        <a href="https://oppahub.com/news/" title="button_to_link">
+                                        <a href="https://oppahub.com/category/news/">Oppa's News</a>
+                                        <a href="https://oppahub.com/category/news/" title="button_to_link">
                                             <button>&gt;</button>
                                         </a>
                                     </h3>
@@ -107,7 +107,7 @@
                                                 }
                                         ?>
                                                 <div class="post post-list-sm square before-seperator">
-                                                    <div class="thumb rounded">
+                                                    <div class="thumb rounded" style="margin-right: 0.5rem;">
                                                         <a href="<?php the_permalink(); ?>">
                                                             <div class="inner">
                                                                 <?php
@@ -243,7 +243,7 @@
                                                 }
                                         ?>
                                                 <div class="post post-list-sm square before-seperator">
-                                                    <div class="thumb rounded">
+                                                    <div class="thumb rounded" style="margin-right: 0.5rem;">
                                                         <a href="<?php the_permalink(); ?>">
                                                             <div class="inner">
                                                                 <?php

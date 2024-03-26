@@ -44,26 +44,26 @@
                         <ul class="navbar-nav mr-auto">
 
                         <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com" class="nav-link dropdown-toggle">Trending</a>
+                                <a href="https://oppahub.com" class="nav-link dropdown-toggle">Channel</a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="https://oppahub.com/humor/" class="dropdown-item">Humor</a>
+                                        <a href="https://oppahub.com/category/humor/" class="dropdown-item">Humor</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/news/" class="dropdown-item">News</a>
+                                        <a href="https://oppahub.com/category/news/" class="dropdown-item">News</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/music/" class="dropdown-item">Music</a>
+                                        <a href="https://oppahub.com/category/music/" class="dropdown-item">Music</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/influencer/" class="dropdown-item">Influencer</a>
+                                        <a href="https://oppahub.com/category/influencer/" class="dropdown-item">Influencer</a>
                                     </li>
                                     
                                 </ul>
                             </li>
                             
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/news/" class="nav-link dropdown-toggle">News</a>
+                                <a href="https://oppahub.com/category/news/" class="nav-link dropdown-toggle">News</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="https://oppahub.com/category/news/korea/" class="dropdown-item">Korea</a>
@@ -82,7 +82,7 @@
                             
                             
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/celeb/" class="nav-link dropdown-toggle">Celeb</a>
+                                <a href="https://oppahub.com/category/celeb/" class="nav-link dropdown-toggle">Celeb</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="https://oppahub.com/category/celeb/artist/" class="dropdown-item">Artist</a>
@@ -99,7 +99,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/humor/" class="nav-link dropdown-toggle">Humor</a>
+                                <a href="https://oppahub.com/category/humor/" class="nav-link dropdown-toggle">Humor</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="https://oppahub.com/category/humor/issue/" class="dropdown-item">Issue</a>
@@ -115,7 +115,7 @@
 
                             
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/netflix/" class="nav-link dropdown-toggle">Netflix</a>
+                                <a href="https://oppahub.com/category/netflix/" class="nav-link dropdown-toggle">Netflix</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="https://oppahub.com/category/netflix/tv-shows/" class="dropdown-item">TV Shows</a>
@@ -133,7 +133,7 @@
                             </li>
 
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/tv-film/" class="nav-link dropdown-toggle">TV/Film</a>
+                                <a href="https://oppahub.com/category/tv-film/" class="nav-link dropdown-toggle">TV/Film</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="https://oppahub.com/category/tv-film/tvseries/" class="dropdown-item">TV series</a>
@@ -145,7 +145,7 @@
                             </li>
 
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/music/" class="nav-link dropdown-toggle">Music</a>
+                                <a href="https://oppahub.com/category/music/" class="nav-link dropdown-toggle">Music</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="https://oppahub.com/category/music/k-pop/" class="dropdown-item">K-pop</a>
@@ -162,7 +162,7 @@
 
 
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/influencer/" class="nav-link dropdown-toggle">Influencer</a>
+                                <a href="https://oppahub.com/category/influencer/" class="nav-link dropdown-toggle">Influencer</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="https://oppahub.com/category/influencer/youtuber/" class="dropdown-item">Youtuber</a>
@@ -177,7 +177,7 @@
                             </li>
 
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/travel/" class="nav-link dropdown-toggle">Travel</a>
+                                <a href="https://oppahub.com/category/travel/" class="nav-link dropdown-toggle">Travel</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="https://oppahub.com/category/travel/korea-travel/" class="dropdown-item">Korea</a>
@@ -202,7 +202,7 @@
                             <i class="fa-regular fa-user"></i>
                             <div class="OppaUserMenu" style="border-color: #00ccdd; border-left-width: 3.5px; border-right-width: 3.5px; border-top-width: 3.5px; border-bottom-width: 3.5px; animation: OppaHubUserMenu 4s linear infinite alternate both;">
 	                        	<ul style="padding-left: 0rem;">
-	                        		<li><a href="https://oppahub.com/account/"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
+	                        		<li><a href="https://oppahub.com/profile/"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
 	                        		<li><a href="https://oppahub.com/account/?type=notifications"><i class="fa-solid fa-inbox"></i>&nbsp;Inbox</a></li>
 	                        		<li><a href="https://oppahub.com/account/"><i class="fa-solid fa-gear"></i>&nbsp;Settings</a></li>
 	                        		<li><a href="https://oppahub.com/11_inquiry_report/"><i class="fa-solid fa-question"></i>&nbsp;Help</a></li>
@@ -236,16 +236,16 @@
                 </li>
 
                 <li class="active">
-                    <a href="/wp-content/themes/oppahub/index.php">Trending</a>
+                    <a href="https://oppahub.com/">Channels</a>
                     <ul class="submenu">
-                        <li><a href="https://oppahub.com/humor/">Humor</a></li>
-                        <li><a href="https://oppahub.com/news/">News</a></li>
-                        <li><a href="https://oppahub.com/music/">Music</a></li>
-                        <li><a href="https://oppahub.com/influencer/">Influencer</a></li>
+                        <li><a href="https://oppahub.com/category/humor/">Humor</a></li>
+                        <li><a href="https://oppahub.com/category/news/">News</a></li>
+                        <li><a href="https://oppahub.com/category/music/">Music</a></li>
+                        <li><a href="https://oppahub.com/category/influencer/">Influencer</a></li>
                     </ul>
                 </li>
                 <li class="active">
-                    <a href="https://oppahub.com/news/">News</a>
+                    <a href="https://oppahub.com/category/news/">News</a>
                     <ul class="submenu">
                         <li><a href="https://oppahub.com/category/news/korea/">Korea</a></li>
                         <li><a href="https://oppahub.com/category/news/entertainment/">Entertainment</a></li>
@@ -254,7 +254,7 @@
                     </ul>
                 </li>
                 <li class="active">
-                    <a href="https://oppahub.com/humor/">Humor</a>
+                    <a href="https://oppahub.com/category/humor/">Humor</a>
                     <ul class="submenu">
                         <li><a href="https://oppahub.com/category/humor/issue/">Issue</a></li>
                         <li><a href="https://oppahub.com/category/humor/stories/">Stories</a></li>
@@ -262,7 +262,7 @@
                     </ul>
                 </li>
                 <li class="active">
-                    <a href="https://oppahub.com/netflix/">Netflix</a>
+                    <a href="https://oppahub.com/category/netflix/">Netflix</a>
                     <ul class="submenu">
                         <li><a href="https://oppahub.com/category/netflix/tv-shows/">TV Shows</a></li>
                         <li><a href="https://oppahub.com/category/netflix/movies/">Movies</a></li>
@@ -271,7 +271,7 @@
                     </ul>
                 </li>
                 <li class="active">
-                    <a href="https://oppahub.com/celeb/">Celeb</a>
+                    <a href="https://oppahub.com/category/celeb/">Celeb</a>
                     <ul class="submenu">
                         <li><a href="https://oppahub.com/category/celeb/artist/">Artist</a></li>
                         <li><a href="https://oppahub.com/category/celeb/actor/">Actor</a></li>
@@ -280,7 +280,7 @@
                     </ul>
                 </li>
                 <li class="active">
-                    <a href="https://oppahub.com/music/">Music</a>
+                    <a href="https://oppahub.com/category/music/">Music</a>
                     <ul class="submenu">
                         <li><a href="https://oppahub.com/category/music/k-pop/">K-pop</a></li>
                         <li><a href="https://oppahub.com/category/music/j-pop/">J-pop</a></li>
@@ -288,7 +288,7 @@
                     </ul>
                 </li>
                 <li class="active">
-                    <a href="https://oppahub.com/influencer/">Influencer</a>
+                    <a href="https://oppahub.com/category/influencer/">Influencer</a>
                     <ul class="submenu">
                         <li><a href="https://oppahub.com/category/influencer/youtuber/">Youtuber</a></li>
                         <li><a href="https://oppahub.com/category/influencer/tiktoker/">Tiktoker</a></li>

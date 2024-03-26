@@ -3,8 +3,6 @@
 
 <div class="col-lg-3" style="margin-right: 0.5%; margin-left: 0.5%;">
 
-<div class="oppasidebar">
-
     <div class="widget rounded">
         <div class="widget-header text-center">
             <h3 class="widget-title">Suggested Posts</h3>
@@ -73,7 +71,7 @@
     </div>
 
 
-        <div class="widget rounded">
+    <div class="widget rounded">
         <div class="widget-header text-center">
             <h3 class="widget-title">Maybe you'll like</h3>
         </div>
@@ -97,7 +95,7 @@
                                 if (has_post_thumbnail()) {
                                     echo '<img src="' . esc_url(get_the_post_thumbnail_url(get_the_ID())) . '" alt="" class="post-image220">';
                                 } else {
-                                    echo '<img src="' . get_template_directory_uri() . '/images/default-image.jpg" alt="" class="post-image220">';
+                                    echo '<img src="' . get_template_directory_uri() . '/images/default-image.jpg" alt="" class="post-image220" style="width: 100%; height :220px; object-fit: cover;">';
                                 }
                                 ?>
                             </div>
@@ -117,11 +115,9 @@
             wp_reset_postdata();
             ?>
         </div>
+    </div>
 
-
-
-
-    <div class="widget rounded">
+    <!-- <div class="widget rounded">
         <div class="widget-header text-center">
             <h3 class="widget-title">Newsletter</h3>
         </div>
@@ -139,8 +135,8 @@
                 By signing up, you agree to our <a href="https://oppahub.com/privacypolicy/">Privacy policy</a>
             </span>
         </div>
-    </div>
-
+    </div> -->
+<!-- 
     
 
 
@@ -156,7 +152,6 @@
             <a href="https://oppahub.com/celeb/" class="tag">#Celeb</a>
             <a href="#" class="tag">#Trending</a>
         </div>
-    </div>
-</div>
-</div>
+    </div> -->
+
 </div>

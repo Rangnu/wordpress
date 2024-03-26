@@ -37,7 +37,7 @@ include 'header.php';
                                 <?php
                                 if (has_post_thumbnail()) {
                                     // Output the post thumbnail without any additional wrapping
-                                    echo '<img fetchpriority="high" loading="eager" src="' . esc_url(get_the_post_thumbnail_url(get_the_ID())) . '" alt="" style="width: 100%; height: 100%;">';
+                                    echo '<img fetchpriority="high" loading="eager" src="' . esc_url(get_the_post_thumbnail_url(get_the_ID())) . '" alt="" style="width: 100%;">';
                                 } else {
                                     // You can add a default image if there is no featured image
                                     echo '<img fetchpriority="high" loading="eager" src="' . get_template_directory_uri() . '/images/default-image.jpg" alt="" style="width: 100%; height: 100%;">';

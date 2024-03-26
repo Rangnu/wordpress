@@ -25,7 +25,6 @@ body {
 }
 
 img {
-
     height: 100%;
     object-fit: cover;
 }
@@ -1084,7 +1083,6 @@ section {
 .featured-post-lg .thumb .inner {
     background-size: cover;
     background-position: center;
-    height: 100%;
     transition: all 0.3s ease-in-out;
     transform: scale(1);
 }
@@ -2100,6 +2098,14 @@ footer .footer-inner .copyright {
 }
 
 @media only screen and (max-width: 420px) {
+    .giphy-embed{
+        max-width: 360px;
+    }
+    .featured-post-lg {
+        width:100%;
+        max-height: 240px;
+        height:100%
+    }
     .post-image170 {
         width: 100%;
         max-width: 280px;
