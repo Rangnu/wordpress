@@ -88,7 +88,7 @@
     <script defer src="/wp-content/themes/oppahub/assets/js/slick.min.js"></script>
     <script src="/wp-content/themes/oppahub/main.js"></script>
     <!-- bootstrap javascripts  -->
-    <script src="/wp-content/themes/oppahub/assets/js/bootstrap.bundle.min"></script>
+    <script src="/wp-content/themes/oppahub/assets/js/bootstrap.bundle.min.js"></script>
     <!-- OppaUserMenu  -->
     <script>
         let UsersProfiles = document.querySelector('.UsersProfiles');

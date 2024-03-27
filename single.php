@@ -74,14 +74,14 @@
 
                         <!-- Filter buttons -->
                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <button style="max-width: 150px;" type="button" class="btn btn-outline-dark <?php echo $is_child_category ? '' : 'active'; ?>" onclick="window.location.href='<?php echo get_category_link($parent_category_id); ?>';">All</button>
+                            <button style="max-width: 150px;" type="button" class="btn btn-secondary <?php echo $is_child_category ? '' : 'active'; ?>" onclick="window.location.href='<?php echo get_category_link($parent_category_id); ?>';">All</button>
                             <?php 
                                 $child_categories = get_categories(array(
                                     'child_of' => $parent_category_id,
                                 ));
                                 foreach ($child_categories as $category) : 
                             ?>
-                                <button style="max-width: 150px;" type="button" class="btn btn-outline-dark <?php echo $current_page->term_id == $category->term_id ? 'active' : ''; ?>" onclick="window.location.href='<?php echo get_category_link($category->term_id); ?>';"><?php echo $category->name; ?></button>
+                                <button style="max-width: 150px;" type="button" class="btn btn-secondary <?php echo $current_page->term_id == $category->term_id ? 'active' : ''; ?>" onclick="window.location.href='<?php echo get_category_link($category->term_id); ?>';"><?php echo $category->name; ?></button>
                             <?php endforeach; ?>
                         </div>
 
@@ -125,7 +125,7 @@
                                             $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
                                             ?>
                                             <!-- Fixed typo: scr to src -->
-                                            <img fetchpriority="low" loading="lazy" src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>" class="post-image64" style="max-width: 120px; height :64px; object-fit: cover;">
+                                            <img fetchpriority="low" loading="lazy" src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>" class="post-image64" style="max-width: 120px; height :64px; object-fit: cover; width: 100%;">
                                         </div>
                                     </a>
                                 </div>
@@ -162,30 +162,54 @@
                         <?php endwhile; ?>
 
                         <div class="clearfix mb-3">
-                            <button class="btn btn-outline-dark" style="float: left;">search</button>
-                            <button class="btn btn-outline-dark" style="float: right;">post</button>
+                            <button class="btn btn-secondary" style="float: left;">search</button>
+                            <button class="btn btn-secondary" style="float: right;">post</button>
                         </div>
                         <!-- Pagination links -->
-                        <div class="post" style="align-items: center;">
-                            <div class="pagination">
-                                <?php
-                                $big = 999999999; // need an unlikely integer
-
-                                echo paginate_links(array(
-                                    'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-                                    'format'    => '?paged=%#%',
-                                    'current'   => max(1, get_query_var('paged')),
-                                    'total'     => $query->max_num_pages,
-                                    'prev_text' => __('&laquo; Previous'),
-                                    'next_text' => __('Next &raquo;'),
-                                ));
-                                ?>
-                            </div>
+                        <div class="op-pagination">
+                            <section class="px-0 py-2 w-100">
+                                <nav class="navigation pagination" aria-label="Posts navigation">
+                                    <h2 class="screen-reader-text">Posts navigation</h2>
+                                    <div class="op-nav-links">
+                                        <ul class="pagination m-0 p-0">    
+                                        <?php
+                                        $big = 999999999; // need an unlikely integer
+                                                    
+                                        // Get the paginated links
+                                        $paginate_links = paginate_links(array(
+                                            'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                                            'format'    => '?paged=%#%',
+                                            'current'   => max(1, get_query_var('paged')),
+                                            'total'     => $query->max_num_pages,
+                                            'prev_text' => __('&laquo; Previous'),
+                                            'next_text' => __('Next &raquo;'),
+                                            'type'      => 'array', // Output links as an array to customize them
+                                            'prev_next' => true,
+                                            'end_size'  => 1,
+                                            'mid_size'  => 2,
+                                        ));
+                                    
+                                        // Loop through the paginated links and output with custom classes
+                                        if ($paginate_links) {
+                                            foreach ($paginate_links as $link) {
+                                                // Add custom class to the current page link
+                                                if (strpos($link, 'current') !== false) {
+                                                    echo '<li class="page-item active">' . str_replace('page-numbers', 'page-link current', $link) . '</li>';
+                                                } else {
+                                                    echo '<li class="page-item">' . str_replace('page-numbers', 'page-link', $link) . '</li>';
+                                                }
+                                            }
+                                        }
+                                        ?>
+                                        </ul>
+                                    </div>
+                                </nav>
+                                <?php wp_reset_postdata(); ?>
+                                <?php else : ?>
+                                    <p><?php esc_html_e('No posts found.'); ?></p>
+                                <?php endif; ?>
+                            </section>
                         </div>
-                        <?php wp_reset_postdata(); ?>
-                    <?php else : ?>
-                        <p><?php esc_html_e('No posts found.'); ?></p>
-                    <?php endif; ?>
                 </div>
             </section>
         </main><!-- .site-main -->
