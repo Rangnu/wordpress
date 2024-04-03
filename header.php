@@ -333,7 +333,7 @@
                 <button class="btn-close" aria-label="Close" type="button"></button>
                 <form role="search" method="get" class="d-flex search-form" action="<?php echo esc_url(home_url('/')); ?>">
                     <input type="search" placeholder="Search and press enter ..." aria-label="Search" class="form-control me-2" name="s">
-                    <button class="btn btn-default btn-lg" style="padding-left: 20px;padding-right: 20px;" type="submit">
+                    <button class="search icon-button" style="padding-left: 20px;padding-right: 20px;" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>

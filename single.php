@@ -3,7 +3,6 @@
 <section class="main-content">
     <div class="container-xl">
         <div class="row gy-4">
-
             <div id="primary" class="bigchunk" style="margin-top: 2.7rem; padding-left: 0; padding-right: 0;">
                 <main id="main" class="padding-10 rounded bordered">
 
@@ -22,8 +21,6 @@
                                 ?>
                                 <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
                                 <div class="entry-meta" style="justify-content:space-between; display:inline-flex">
-                                    <!-- ---get category--- -->
-                                    
                                     <ul class="meta list-inline mb-0 px-1"></ul>
                                     <?php
                                     echo 'Posted on ' . get_the_date() . ' by ' . get_the_author();
@@ -51,13 +48,24 @@
                                 endif;
                                 ?>
                             </footer>
+                            
+                            <div class="clearfix mb-3">
+                                <?php if (is_user_logged_in()) : ?>
+                                    <a class="btn btn-secondary" style="float: left;" href="<?php echo get_edit_post_link(); ?>">Edit</a>
+                                    <a class="btn btn-secondary" style="float: right;" href="<?php echo admin_url('post-new.php'); ?>">New Post</a>
+                                <?php else : ?>
+                                    <a class="btn btn-secondary" style="float: left;" href="https://oppahub.com/login/">Edit</a>
+                                    <a class="btn btn-secondary" style="float: right;" href="https://oppahub.com/login/">New Post</a>
+                                <?php endif; ?>
+                            </div>
+
 
                         </article>
                     <?php endwhile; ?>
                     
-                        <hr style="margin-bottom: 1px; margin-top: 0px;">
-                        <!-- Display Other Posts from the Same Category -->
-                        <section class="padding-0" style="display: block;">
+                    <hr style="margin-bottom: 1px; margin-top: 0px;">
+                    <!-- Display Other Posts from the Same Category -->
+                    <section class="padding-0" style="display: block;">
                         <div class="section-header" style="margin-top: 1.7rem;">
                             <h1 class="section-title">
                                 <?php 
@@ -74,14 +82,14 @@
 
                         <!-- Filter buttons -->
                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <button style="max-width: 150px;" type="button" class="btn btn-secondary <?php echo $is_child_category ? '' : 'active'; ?>" onclick="window.location.href='<?php echo get_category_link($parent_category_id); ?>';">All</button>
+                            <button style="max-width: 150px;" type="button" class="btn btn-secondary <?php echo !in_category($parent_category_id) ? 'active' : ''; ?>" onclick="window.location.href='<?php echo get_category_link($parent_category_id); ?>';">All</button>
                             <?php 
                                 $child_categories = get_categories(array(
                                     'child_of' => $parent_category_id,
                                 ));
                                 foreach ($child_categories as $category) : 
                             ?>
-                                <button style="max-width: 150px;" type="button" class="btn btn-secondary <?php echo $current_page->term_id == $category->term_id ? 'active' : ''; ?>" onclick="window.location.href='<?php echo get_category_link($category->term_id); ?>';"><?php echo $category->name; ?></button>
+                                <button style="max-width: 150px;" type="button" class="btn btn-secondary <?php echo in_category($category->term_id) ? 'active' : ''; ?>" onclick="window.location.href='<?php echo get_category_link($category->term_id); ?>';"><?php echo $category->name; ?></button>
                             <?php endforeach; ?>
                         </div>
 
@@ -90,20 +98,18 @@
                         <div class="row padding-10 rounded bordered" style="display: block;">
 
                         <?php
+                        // Get the current post's child category ID
+                        $current_category = get_the_category();
+                        $current_category_id = $current_category[0]->cat_ID;
+
                         // Pagination
                         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                         $args = array(
                             'post_type'      => 'post',
                             'posts_per_page' => 15,
                             'paged'          => $paged,
+                            'cat'            => $current_category_id, // Fetch posts from the current child category
                         );
-                    
-                        // If it's a child category, filter posts by its ID
-                        if ($is_child_category) {
-                            $args['cat'] = $current_page->term_id;
-                        } else {
-                            $args['cat'] = $parent_category_id;
-                        }
                     
                         $query = new WP_Query($args);
                     
@@ -160,11 +166,25 @@
                         </div>
                         <hr style="margin-bottom: 1px;">
                         <?php endwhile; ?>
-
+                                        
                         <div class="clearfix mb-3">
-                            <button class="btn btn-secondary" style="float: left;">search</button>
-                            <button class="btn btn-secondary" style="float: right;">post</button>
+                            <form role="search" method="get" class="search-form" style="display: inline-flex;" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                <input type="search" class="form-control me-2" placeholder="Search..." style="width: 100%;" value="<?php echo get_search_query(); ?>" name="s" />
+                                <button type="submit" class="btn btn-secondary search icon-button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                            <?php if (is_user_logged_in()) : ?>
+                                <a class="btn btn-secondary" style="float: right;" href="<?php echo admin_url('post-new.php'); ?>">New Post</a>
+                            <?php else : ?>
+                                <a class="btn btn-secondary" style="float: right;" href="https://oppahub.com/login/">New Post</a>
+                            <?php endif; ?>
                         </div>
+
+
+
+
+
                         <!-- Pagination links -->
                         <div class="op-pagination">
                             <section class="px-0 py-2 w-100">
@@ -177,7 +197,7 @@
                                                     
                                         // Get the paginated links
                                         $paginate_links = paginate_links(array(
-                                            'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                                            'base'      => esc_url(get_category_link($current_category_id)) . '%_%', // Include the category base URL
                                             'format'    => '?paged=%#%',
                                             'current'   => max(1, get_query_var('paged')),
                                             'total'     => $query->max_num_pages,
@@ -212,7 +232,7 @@
                         </div>
                 </div>
             </section>
-        </main><!-- .site-main -->
+        </main>
         <?php
         // Include the oppasidebar
         include 'oppasidebar.php';
