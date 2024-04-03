@@ -4,7 +4,7 @@ Theme URI: https://oppahub.com/
 Author: oppahub
 Author URI: https://oppahub.com/
 Description: personal making theme
-Version: 1.0
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: https://oppahub.com/
 Text Domain: oppahub
@@ -2292,9 +2292,9 @@ footer .footer-inner .copyright {
     height: 0;
     background-color: #ccc;
     margin-bottom: 1.5em;
-border: 1px solid #00ccdd;
-border-color: #00ccdd;
-animation: flowingBorderAnimation 4s linear infinite alternate both;
+    border: 1px solid #00ccdd;
+    border-color: #00ccdd;
+    animation: flowingBorderAnimation 4s linear infinite alternate both;
 }
 
 iframe {
@@ -2307,7 +2307,7 @@ iframe {
 table {
   border-spacing: 0;
   width: 100%;
-  table-layout: fixed;
+  /* table-layout: fixed; */
 }
 
 th,
@@ -2316,7 +2316,7 @@ td {
   word-break: break-word;
 }
 th {
-  background: #d77eff;
+  background: #b819ff;
   color: #fff;
   text-align: left;
 }
@@ -2333,9 +2333,7 @@ td {
 td:first-child {
   border-left: 1px solid #c6c9cc;
 }
-tr:nth-child(even) td {
-  
-}
+
 tr:last-child td:first-child {
   border-bottom-left-radius: 6px;
 }

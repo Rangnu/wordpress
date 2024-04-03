@@ -9,87 +9,83 @@ include 'header.php';
         <section id="hero">
             <div class="container-xl">
                 <div class="row gy-4">
-                <div class="col-lg-8sebu">
+                    <div class="col-lg-8sebu">
 
-                <?php
-                // Query to get a random post
-                $random_args = array(
-                    'post_type'      => 'post',
-                    'posts_per_page' => 1,
-                    'orderby'        => 'rand', // Get a random post
-                );
+                        <?php
+                        // Query to get a random post
+                        $random_args = array(
+                            'post_type'      => 'post',
+                            'posts_per_page' => 1,
+                            'orderby'        => 'rand', // Get a random post
+                        );
 
-                $random_post = new WP_Query($random_args);
+                        $random_post = new WP_Query($random_args);
 
-                // Check if there is a random post
-                if ($random_post->have_posts()) {
-                    $random_post->the_post();
-                
-                $categories = get_the_category();
-                if (!empty($categories)) {
-                    $category = $categories[0]; // Assuming the post is assigned to only one category
-                    $category_link = get_category_link($category);
-                }
-                ?>
-                    <div class="post featured-post-lg">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="thumb rounded inner">
-                                <?php
-                                if (has_post_thumbnail()) {
-                                    // Output the post thumbnail without any additional wrapping
-                                    echo '<img fetchpriority="high" loading="eager" src="' . esc_url(get_the_post_thumbnail_url(get_the_ID())) . '" alt="" style="width: 100%;">';
-                                } else {
-                                    // You can add a default image if there is no featured image
-                                    echo '<img fetchpriority="high" loading="eager" src="' . get_template_directory_uri() . '/images/default-image.jpg" alt="" style="width: 100%; height: 100%;">';
-                                }
-                                ?>
-                            </div>
-                        </a>  
-                                
+                        // Check if there is a random post
+                        if ($random_post->have_posts()) {
+                            $random_post->the_post();
                         
+                        $categories = get_the_category();
+                        if (!empty($categories)) {
+                            $category = $categories[0]; // Assuming the post is assigned to only one category
+                            $category_link = get_category_link($category);
+                        }
+                        ?>
+                        <div class="post featured-post-lg">
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="thumb rounded inner">
+                                    <?php
+                                    if (has_post_thumbnail()) {
+                                        // Output the post thumbnail without any additional wrapping
+                                        echo '<img fetchpriority="high" loading="eager" src="' . esc_url(get_the_post_thumbnail_url(get_the_ID())) . '" alt="" style="width: 100%;">';
+                                    } else {
+                                        // You can add a default image if there is no featured image
+                                        echo '<img fetchpriority="high" loading="eager" src="' . get_template_directory_uri() . '/images/default-image.jpg" alt="" style="width: 100%; height: 100%;">';
+                                    }
+                                    ?>
+                                </div>
+                            </a>  
 
-                
-                        <div class="details clearfix">
-                            <a href="<?php echo esc_url($category_link); ?>" class="category-badge"><?php echo esc_html($category->name); ?></a>
-                            <h1 class="post-title" style="color: #203656; font-family: 'Poppins', sans-serif; font-weight: 700; line-height: 1.4; margin: 2% 0;">
-                                <a href="<?php the_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 7, '...' ); ?></a>
-                            </h1>
-                            <ul class="meta list-inline mb-0">
-                                <li class="list-inline-item">
-                                    <a href="#"><?php the_author(); ?></a>
-                                </li>
-                                <li class="list-inline-item"><?php echo get_the_date(); ?></li>
-                            </ul>
-                        </div>
+                                
+
+                                
+                            <div class="details clearfix">
+                                <a href="<?php echo esc_url($category_link); ?>" class="category-badge"><?php echo esc_html($category->name); ?></a>
+                                <h1 class="post-title" style="color: #203656; font-family: 'Poppins', sans-serif; font-weight: 700; line-height: 1.4; margin: 2% 0;">
+                                    <a href="<?php the_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 7, '...' ); ?></a>
+                                </h1>
+                                <ul class="meta list-inline mb-0">
+                                    <li class="list-inline-item">
+                                        <a href="#"><?php the_author(); ?></a>
+                                    </li>
+                                    <li class="list-inline-item"><?php echo get_the_date(); ?></li>
+                                </ul>
+                            </div>
                     </div>
                 
-                    <?php
-                    // Reset Post Data
-                    wp_reset_postdata();
-                }
-                ?>
-
-
-                    
+                        <?php
+                        // Reset Post Data
+                        wp_reset_postdata();
+                        }
+                        ?>
 
                     <div class="col-lg-4sebu">
                         <div class="post-tabs rounded bordered" style="padding-bottom: 5px;">
                             <ul class="nav nav-tabs nav-pills nav-fill" id="postTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button aria-controls="popular" aria-selected="true" class="nav-link active"
-                                        data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab"
-                                        type="button">
-                                        Popular
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button aria-controls="recent" aria-selected="false" class="nav-link"
+                                    <button aria-controls="recent" aria-selected="false" class="nav-link active"
                                         data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab" role="tab"
                                         type="button">
                                         Recent
                                     </button>
                                 </li>
-
+                                <li class="nav-item" role="presentation">
+                                    <button aria-controls="popular" aria-selected="true" class="nav-link"
+                                        data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab"
+                                        type="button">
+                                        Popular
+                                    </button>
+                                </li>
                             </ul>
 
                             <!-- content  -->
@@ -99,7 +95,7 @@ include 'header.php';
                                 <!-- pop post  -->
 
                                 <!-- popular -->
-                                <div class="tab-pane fade show active" id="popular" aria-labelledby="popular-tab" role="tabpanel">
+                                <div class="tab-pane fade" id="popular" aria-labelledby="popular-tab" role="tabpanel">
                                     <?php
                                     // Query to get 4 random posts for the "Popular" section
                                     $random_popular_args = array(
@@ -156,7 +152,7 @@ include 'header.php';
                                                     
 
                                 <!-- recent  -->
-                                <div class="tab-pane fade" id="recent" aria-labelledby="recent-tab" role="tabpanel">
+                                <div class="tab-pane fade show active" id="recent" aria-labelledby="recent-tab" role="tabpanel">
                                     <?php
                                     // Query to get the 4 most recent posts
                                     $args = array(

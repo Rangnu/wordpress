@@ -40,9 +40,9 @@ include 'header.php';
 
         <!-- Filter buttons -->
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <button style="max-width: 130px;" type="button" class="btn btn-secondary <?php echo $is_child_category ? '' : 'active'; ?>" onclick="window.location.href='<?php echo get_category_link($parent_category_id); ?>';">All</button>
+            <button style="max-width: 130px;font-size: small;font-weight: 600;border-width: 1px 1px 0;" type="button" class="btn btn-secondary <?php echo $is_child_category ? '' : 'active'; ?>" onclick="window.location.href='<?php echo get_category_link($parent_category_id); ?>';">All</button>
             <?php foreach ($child_categories as $category) : ?>
-                <button style="max-width: 130px;" type="button" class="btn btn-secondary <?php echo $current_page->term_id == $category->term_id ? 'active' : ''; ?>" onclick="window.location.href='<?php echo get_category_link($category->term_id); ?>';"><?php echo $category->name; ?></button>
+                <button style="max-width: 130px;font-size: small;font-weight: 600;border-width: 1px 1px 0;" type="button" class="btn btn-secondary <?php echo $current_page->term_id == $category->term_id ? 'active' : ''; ?>" onclick="window.location.href='<?php echo get_category_link($category->term_id); ?>';"><?php echo $category->name; ?></button>
             <?php endforeach; ?>
         </div>
         <!-- ---posts line--- -->
