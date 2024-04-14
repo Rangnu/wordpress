@@ -128,34 +128,34 @@ include 'header.php';
                         <h2 class="screen-reader-text">Posts navigation</h2>
                         <div class="op-nav-links">
                             <ul class="pagination m-0 p-0">    
-                            <?php
-                            $big = 999999999; // need an unlikely integer
-                            // Get the paginated links
-                            $paginate_links = paginate_links(array(
-                                'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-                                'format'    => '?paged=%#%',
-                                'current'   => max(1, get_query_var('paged')),
-                                'total'     => $query->max_num_pages,
-                                'prev_text' => __('&laquo; Previous'),
-                                'next_text' => __('Next &raquo;'),
-                                'type'      => 'array', // Output links as an array to customize them
-                                'prev_next' => true,
-                                'end_size'  => 1,
-                                'mid_size'  => 2,
-                            ));
-                        
-                            // Loop through the paginated links and output with custom classes
-                            if ($paginate_links) {
-                                foreach ($paginate_links as $link) {
-                                    // Add custom class to the current page link
-                                    if (strpos($link, 'current') !== false) {
-                                        echo '<li class="page-item active">' . str_replace('page-numbers', 'page-link current', $link) . '</li>';
-                                    } else {
-                                        echo '<li class="page-item">' . str_replace('page-numbers', 'page-link', $link) . '</li>';
+                                <?php
+                                $big = 999999999; // need an unlikely integer
+                                // Get the paginated links
+                                $paginate_links = paginate_links(array(
+                                    'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                                    'format'    => '?paged=%#%',
+                                    'current'   => max(1, get_query_var('paged')),
+                                    'total'     => $query->max_num_pages,
+                                    'prev_text' => __('&laquo; Previous'),
+                                    'next_text' => __('Next &raquo;'),
+                                    'type'      => 'array', // Output links as an array to customize them
+                                    'prev_next' => true,
+                                    'end_size'  => 1,
+                                    'mid_size'  => 2,
+                                ));
+                            
+                                // Loop through the paginated links and output with custom classes
+                                if ($paginate_links) {
+                                    foreach ($paginate_links as $link) {
+                                        // Add custom class to the current page link
+                                        if (strpos($link, 'current') !== false) {
+                                            echo '<li class="page-item active">' . str_replace('page-numbers', 'page-link current', $link) . '</li>';
+                                        } else {
+                                            echo '<li class="page-item">' . str_replace('page-numbers', 'page-link', $link) . '</li>';
+                                        }
                                     }
                                 }
-                            }
-                            ?>
+                                ?>
                             </ul>
                         </div>
                     </nav>

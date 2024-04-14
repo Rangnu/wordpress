@@ -45,14 +45,6 @@ img {
     position: relative;
 }
 
-h3, h5, h6 {
-    color: #203656;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 590;
-    line-height: 1.4;
-    /* h5 is for post titles */
-}
-
 h1 {
     color: #203656;
     font-family: 'Poppins', sans-serif;
@@ -62,23 +54,6 @@ h1 {
     margin-bottom: 2%;
     font-size: 19px;
 }
-
-.entry-content h2 {
-    clear: both;
-    margin: 29px 0 22px;
-    font-size: 24px;
-    line-height: 1.5;
-    color: #000;
-    padding: 5px 15px;
-    border-bottom: 2px solid;
-    border-left: 10px solid;
-    border-color: #00ccdd;
-    animation: OppaHubUserMenu 4s linear infinite alternate both;
-}
-
-
-
-
 h4 {
     color: #203656;
     font-family: 'Poppins', sans-serif;
@@ -88,10 +63,35 @@ h4 {
     margin-bottom: 4%;
     font-size: 16px;
 }
+.entry-content h2 {
+    clear: both;
+    margin: 29px 0 22px;
+    line-height: 1.5;
+    color: #000;
+    padding: 5px 15px;
+    border-bottom: 2px solid;
+    border-left: 10px solid;
+    border-color: #00ccdd;
+    animation: OppaHubUserMenu 4s linear infinite alternate both;
+}
+
+.entry-content h3 {
+    border-left: 10px solid;
+    border-color: #00ccdd;
+    animation: OppaHubUserMenu 4s linear infinite alternate both;
+	padding-left: 7px;
+}
 
 
 a {
     color: #203656;
+    outline: 0;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.entry-content a {
+    color: #0068c4;
     outline: 0;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -516,19 +516,6 @@ body.down .header-default.clone {
     border-top: 1px solid #ddd;
 }
 
-.dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 5px;
-    vertical-align: middle;
-    font-size: 8px;
-    border-top: transparent;
-    border-right: transparent;
-    border-bottom: 0;
-    border-left: transparent;
-    content: "\f0d7"; /* Unicode for the caret-down icon in Font Awesome Solid */
-    font-family: "Font Awesome 5 Free"; /* Font Awesome font-family */
-}
-
 /* for fixing spaces of every sections*/
 .nav-item.dropdown.active {
     margin-left: -14px;
@@ -877,7 +864,7 @@ section {
 }
 
 #hero {
-    margin-top: 40px;
+    margin-top: 5px;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -998,7 +985,6 @@ section {
 }
 
 .col-lg-4sebu {
-    
     min-width: 200px;
 }
 
@@ -1399,7 +1385,7 @@ section {
 /* *********************** */
 
 .padding-10 {
-    padding: 1%;
+    padding: .8rem;
 }
 
 .post .post-format {
@@ -2017,7 +2003,7 @@ footer .footer-inner .copyright {
 
 .post-image {
     width: 100%;
-    max-height: 200px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -2421,4 +2407,7 @@ tr:last-child td:last-child {
     display: flex; /* Use flexbox */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+}
+#ez-toc-container {
+    float:left;
 }

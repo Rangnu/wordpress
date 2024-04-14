@@ -45,10 +45,7 @@ include 'header.php';
                                     ?>
                                 </div>
                             </a>  
-
-                                
-
-                                
+                                              
                             <div class="details clearfix">
                                 <a href="<?php echo esc_url($category_link); ?>" class="category-badge"><?php echo esc_html($category->name); ?></a>
                                 <h1 class="post-title" style="color: #203656; font-family: 'Poppins', sans-serif; font-weight: 700; line-height: 1.4; margin: 2% 0;">

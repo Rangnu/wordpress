@@ -3,7 +3,7 @@
 <section class="main-content">
     <div class="container-xl">
         <div class="row gy-4">
-            <div id="primary" class="bigchunk" style="margin-top: 2.7rem; padding-left: 0; padding-right: 0;">
+            <div id="primary" class="bigchunk" style="padding-left: 0; padding-right: 0;">
                 <main id="main" class="padding-10 rounded bordered">
 
                     <?php

@@ -50,10 +50,16 @@
                                         <?php } ?>
                                         
                                         <div class="thumb rounded">
-                                        <a href="<?php echo esc_url($category_link); ?>" class="category-badge position-absolute"><?php echo esc_html($category->name); ?></a>
+                                            <a href="<?php echo esc_url($category_link); ?>" class="category-badge position-absolute"><?php echo esc_html($category->name); ?></a>
                                             <?php
-                                            $thumbnail_id = get_post_thumbnail_id();
-                                            $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
+                                            // Check if the post has a featured image
+                                            if (has_post_thumbnail()) {
+                                                $thumbnail_id = get_post_thumbnail_id();
+                                                $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
+                                            } else {
+                                                // If no featured image, use default image URL
+                                                $thumbnail_url = get_template_directory_uri() . '/images/default-image.jpg';
+                                            }
                                             ?>
                                             <a href="<?php the_permalink(); ?>">
                                                 <div class="inner">
@@ -61,6 +67,7 @@
                                                 </div>
                                             </a>
                                         </div>
+
 
                                         
                                         <h4 class="post-title my-1" style="width: 100%; box-sizing: border-box;">
@@ -107,7 +114,8 @@
                                                 }
                                         ?>
                                                 <div class="post post-list-sm square before-seperator">
-                                                    <div class="thumb rounded" style="margin-right: 0.5rem;">
+                                                <div class="thumb rounded" style="margin-right: 0.5rem;">
+                                                    <?php if (has_post_thumbnail()) : ?>
                                                         <a href="<?php the_permalink(); ?>">
                                                             <div class="inner">
                                                                 <?php
@@ -117,7 +125,14 @@
                                                                 <img fetchpriority="low" loading="lazy" src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>" class="post-image74">
                                                             </div>
                                                         </a>
-                                                    </div>
+                                                    <?php else : ?>
+                                                        <!-- Display default image -->
+                                                        <div class="inner">
+                                                            <img fetchpriority="low" loading="lazy" src="/images/default-image.jpg" alt="Default Image" class="post-image74">
+                                                        </div>
+                                                    <?php endif; ?>
+                                                </div>
+
                                                     <div class="details clearfix">
                                                         <h4 class="post-title my-0">
                                                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -186,10 +201,16 @@
                                         <?php } ?>
                                         
                                         <div class="thumb rounded">
-                                        <a href="<?php echo esc_url($category_link); ?>" class="category-badge position-absolute"><?php echo esc_html($category->slug); ?></a>
+                                            <a href="<?php echo esc_url($category_link); ?>" class="category-badge position-absolute"><?php echo esc_html($category->name); ?></a>
                                             <?php
-                                            $thumbnail_id = get_post_thumbnail_id();
-                                            $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
+                                            // Check if the post has a featured image
+                                            if (has_post_thumbnail()) {
+                                                $thumbnail_id = get_post_thumbnail_id();
+                                                $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
+                                            } else {
+                                                // If no featured image, use default image URL
+                                                $thumbnail_url = get_template_directory_uri() . '/images/default-image.jpg';
+                                            }
                                             ?>
                                             <a href="<?php the_permalink(); ?>">
                                                 <div class="inner">
@@ -323,19 +344,26 @@
                                     <div class="col-md-12 col-sm-6" style="width:100%; padding-left:0px;padding-right:0px;">
                                         <!-- post  -->
                                         <div class="post post-list clearfix" style="margin-bottom : 0px; display :flex; justify-content:space-between; align-items: center;">
-                                            <div class="thumb rounded" style="flex:1;">
-                                                <?php if (has_post_thumbnail()) : ?>
-                                                    <a href="<?php the_permalink(); ?>">
-                                                        <div class="inner">
-                                                            <?php
-                                                            $thumbnail_id = get_post_thumbnail_id();
-                                                            $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
-                                                            ?>
-                                                            <img fetchpriority="low" loading="lazy" src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>" class="post-image194">
-                                                        </div>
-                                                    </a>
-                                                <?php endif; ?>
-                                            </div>
+                                        <div class="thumb rounded" style="flex:1;">
+                                            <?php if (has_post_thumbnail()) : ?>
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <div class="inner">
+                                                        <?php
+                                                        $thumbnail_id = get_post_thumbnail_id();
+                                                        $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full')[0];
+                                                        ?>
+                                                        <img fetchpriority="low" loading="lazy" src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>" class="post-image194">
+                                                    </div>
+                                                </a>
+                                            <?php else : ?>
+                                                <!-- Display default image -->
+                                                <div class="inner">
+                                                    <img fetchpriority="low" loading="lazy" src="/images/default-image.jpg" alt="Default Image" class="post-image194">
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
+                                            
+
                                             <div class="details" style=" flex:1.5; width:100%; padding-left: 0.5rem; ">
                                                 <ul class="meta list-inline mb-0">
                                                     <li class="list-inline-item">
@@ -364,34 +392,51 @@
                                     </div>
                                     <hr style="margin-bottom: 1px; margin-top: 0px;">
                             <?php endwhile; ?>
-                                              <!-- Pagination links -->
-                            <div class="pagination">
-                                <?php
-                                global $wp_query;
+                            <!-- Pagination links -->
+                            <div class="op-pagination">
+                                <section class="px-0 py-2 w-100">
+                                    <nav class="navigation pagination" aria-label="Posts navigation">
+                                        <h2 class="screen-reader-text">Posts navigation</h2>
+                                        <div class="op-nav-links">
+                                            <ul class="pagination m-0 p-0">    
+                                                <?php
+                                                $big = 999999999; // need an unlikely integer
+                                                // Get the paginated links
+                                                $paginate_links = paginate_links(array(
+                                                    'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                                                    'format'    => '?paged=%#%',
+                                                    'current'   => max(1, get_query_var('paged')),
+                                                    'total'     => $query->max_num_pages,
+                                                    'prev_text' => __('&laquo; Previous'),
+                                                    'next_text' => __('Next &raquo;'),
+                                                    'type'      => 'array', // Output links as an array to customize them
+                                                    'prev_next' => true,
+                                                    'end_size'  => 1,
+                                                    'mid_size'  => 2,
+                                                ));
+                                            
+                                                // Loop through the paginated links and output with custom classes
+                                                if ($paginate_links) {
+                                                    foreach ($paginate_links as $link) {
+                                                        // Add custom class to the current page link
+                                                        if (strpos($link, 'current') !== false) {
+                                                            echo '<li class="page-item active">' . str_replace('page-numbers', 'page-link current', $link) . '</li>';
+                                                        } else {
+                                                            echo '<li class="page-item">' . str_replace('page-numbers', 'page-link', $link) . '</li>';
+                                                        }
+                                                    }
+                                                }
+                                                ?>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                    <?php wp_reset_postdata(); ?>
+                                    <?php else : ?>
+                                        <p><?php esc_html_e('No posts found.'); ?></p>
+                                    <?php endif; ?>
+                                </section>
+                            </div>
 
-                                $big = 999999999; // need an unlikely integer
-
-                                echo paginate_links(array(
-                                    'base'    => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-                                    'format'  => '?paged=%#%',
-                                    'current' => max(1, get_query_var('paged')),
-                                    'total'   => $wp_query->max_num_pages,
-                                    'prev_text' => __('&laquo; Previous'),
-                                    'next_text' => __('Next &raquo;'),
-                                ));
-                                ?>
-                            </div>      
-                            
-
-
-
-                            
-                            <?php wp_reset_postdata(); ?>
-                            <?php else : ?>
-                                <p><?php esc_html_e('No posts found.'); ?></p>
-                            <?php endif; ?>
-                            
-                        </div>
 
                                 
                         <!-- left part over here  -->

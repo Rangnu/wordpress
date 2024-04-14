@@ -25,7 +25,7 @@
      <?php wp_head(); ?>
 </head>
 <body>
-<div class="site-wrapper">
+<div class="site-wrapper" style="height: 75px;">
     <div class="main-overlay"></div>
     <header class="header-default" style="padding-bottom: 4px;">
             <nav class="navbar navbar-expand-lg">
@@ -202,11 +202,11 @@
                             <i class="fa-regular fa-user"></i>
                             <div class="OppaUserMenu" style="border-color: #00ccdd; border-left-width: 3.5px; border-right-width: 3.5px; border-top-width: 3.5px; border-bottom-width: 3.5px; animation: OppaHubUserMenu 4s linear infinite alternate both;">
 	                        	<ul style="padding-left: 0rem;">
-	                        		<li><a href="https://oppahub.com/profile/"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
-	                        		<li><a href="https://oppahub.com/account/?type=notifications"><i class="fa-solid fa-inbox"></i>&nbsp;Inbox</a></li>
-	                        		<li><a href="https://oppahub.com/account/"><i class="fa-solid fa-gear"></i>&nbsp;Settings</a></li>
+	                        		<li><a href="https://oppahub.com/my-account/"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
+	                        		<li><a href="https://oppahub.com/my-account/"><i class="fa-solid fa-inbox"></i>&nbsp;Inbox</a></li>
+	                        		<li><a href="https://oppahub.com/my-account/"><i class="fa-solid fa-gear"></i>&nbsp;Settings</a></li>
 	                        		<li><a href="https://oppahub.com/11_inquiry_report/"><i class="fa-solid fa-question"></i>&nbsp;Help</a></li>
-	                        		<li><a href="https://oppahub.com/wp-login.php?action=logout"><i class="fa-solid fa-sign-out"></i>&nbsp;Sign Out</a></li>
+	                        		<li><a href="https://oppahub.com/member-logout/"><i class="fa-solid fa-sign-out"></i>&nbsp;Sign Out</a></li>
 	                        	</ul>
 	                        </div>
                         </button>
