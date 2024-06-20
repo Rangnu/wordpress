@@ -19,8 +19,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
     <!-- Include any additional meta tags or scripts if needed -->
-    <meta name="google-site-verification" content="deletedforprivacy" />
-    <script async src="deletedforprivacy"
+    <meta name="google-site-verification" content="deleted_for_privacy" />
+    <script async src="deleted_for_privacy"
      crossorigin="anonymous"></script>
      <?php wp_head(); ?>
 </head>
@@ -47,146 +47,146 @@
                                 <a href="https://oppahub.com" class="nav-link dropdown-toggle">Channel</a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="https://oppahub.com/category/humor/" class="dropdown-item">Humor</a>
+                                        <a href="https://oppahub.com/c/humor/" class="dropdown-item">Humor</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/category/news/" class="dropdown-item">News</a>
+                                        <a href="https://oppahub.com/c/news/" class="dropdown-item">News</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/category/music/" class="dropdown-item">Music</a>
+                                        <a href="https://oppahub.com/c/music/" class="dropdown-item">Music</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/category/influencer/" class="dropdown-item">Influencer</a>
-                                    </li>
-                                    
-                                </ul>
-                            </li>
-                            
-                            <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/category/news/" class="nav-link dropdown-toggle">News</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="https://oppahub.com/category/news/korea/" class="dropdown-item">Korea</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/news/entertainment/" class="dropdown-item">entertainment</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/news/sports-news/" class="dropdown-item">Sports</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/news/fashion/" class="dropdown-item">Fashion</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            
-                            
-                            <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/category/celeb/" class="nav-link dropdown-toggle">Celeb</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="https://oppahub.com/category/celeb/artist/" class="dropdown-item">Artist</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/celeb/actor/" class="dropdown-item">Actor</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/celeb/entertainer/" class="dropdown-item">Entertainer</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/celeb/sports/" class="dropdown-item">Sports</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/category/humor/" class="nav-link dropdown-toggle">Humor</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="https://oppahub.com/category/humor/issue/" class="dropdown-item">Issue</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/humor/stories/" class="dropdown-item">Stories</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/humor/reaction/" class="dropdown-item">Reaction</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            
-                            <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/category/netflix/" class="nav-link dropdown-toggle">Netflix</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="https://oppahub.com/category/netflix/tv-shows/" class="dropdown-item">TV Shows</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/netflix/movies/" class="dropdown-item">Movies</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/netflix/anime/" class="dropdown-item">Anime</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/netflix/drama/" class="dropdown-item">Drama</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/category/tv-film/" class="nav-link dropdown-toggle">TV/Film</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="https://oppahub.com/category/tv-film/tvseries/" class="dropdown-item">TV series</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/tv-film/movies-tvfilm/" class="dropdown-item">Movies</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/category/music/" class="nav-link dropdown-toggle">Music</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="https://oppahub.com/category/music/k-pop/" class="dropdown-item">K-pop</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/music/j-pop/" class="dropdown-item">J-pop</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://oppahub.com/category/music/others/" class="dropdown-item">Others</a>
+                                        <a href="https://oppahub.com/c/influencer/" class="dropdown-item">Influencer</a>
                                     </li>
                                     
                                 </ul>
                             </li>
-
-
+                            
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/category/influencer/" class="nav-link dropdown-toggle">Influencer</a>
+                                <a href="https://oppahub.com/c/news/" class="nav-link dropdown-toggle">News</a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="https://oppahub.com/category/influencer/youtuber/" class="dropdown-item">Youtuber</a>
+                                        <a href="https://oppahub.com/c/news/korea/" class="dropdown-item">Korea</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/category/influencer/tiktoker/" class="dropdown-item">Tiktoker</a>
+                                        <a href="https://oppahub.com/c/news/entertainment/" class="dropdown-item">entertainment</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/category/influencer/afreeca-tv/" class="dropdown-item">Afreeca TV</a>
+                                        <a href="https://oppahub.com/c/news/sports-news/" class="dropdown-item">Sports</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/news/fashion/" class="dropdown-item">Fashion</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            
+                            <li class="nav-item dropdown active">
+                                <a href="https://oppahub.com/c/celeb/" class="nav-link dropdown-toggle">Celeb</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="https://oppahub.com/c/celeb/artist/" class="dropdown-item">Artist</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/celeb/actor/" class="dropdown-item">Actor</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/celeb/entertainer/" class="dropdown-item">Entertainer</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/celeb/sports/" class="dropdown-item">Sports</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown active">
+                                <a href="https://oppahub.com/c/humor/" class="nav-link dropdown-toggle">Humor</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="https://oppahub.com/c/humor/issue/" class="dropdown-item">Issue</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/humor/stories/" class="dropdown-item">Stories</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/humor/reaction/" class="dropdown-item">Reaction</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            
+                            <li class="nav-item dropdown active">
+                                <a href="https://oppahub.com/c/netflix/" class="nav-link dropdown-toggle">Netflix</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="https://oppahub.com/c/netflix/tv-shows/" class="dropdown-item">TV Shows</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/netflix/movies/" class="dropdown-item">Movies</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/netflix/anime/" class="dropdown-item">Anime</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/netflix/drama/" class="dropdown-item">Drama</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="nav-item dropdown active">
-                                <a href="https://oppahub.com/category/travel/" class="nav-link dropdown-toggle">Travel</a>
+                                <a href="https://oppahub.com/c/tv-film/" class="nav-link dropdown-toggle">TV/Film</a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="https://oppahub.com/category/travel/korea-travel/" class="dropdown-item">Korea</a>
+                                        <a href="https://oppahub.com/c/tv-film/tvseries/" class="dropdown-item">TV series</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/category/travel/japan/" class="dropdown-item">Japan</a>
+                                        <a href="https://oppahub.com/c/tv-film/movies-tvfilm/" class="dropdown-item">Movies</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown active">
+                                <a href="https://oppahub.com/c/music/" class="nav-link dropdown-toggle">Music</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="https://oppahub.com/c/music/k-pop/" class="dropdown-item">K-pop</a>
                                     </li>
                                     <li>
-                                        <a href="https://oppahub.com/category/travel/global/" class="dropdown-item">Global</a>
+                                        <a href="https://oppahub.com/c/music/j-pop/" class="dropdown-item">J-pop</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/music/others/" class="dropdown-item">Others</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+
+
+                            <li class="nav-item dropdown active">
+                                <a href="https://oppahub.com/c/influencer/" class="nav-link dropdown-toggle">Influencer</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="https://oppahub.com/c/influencer/youtuber/" class="dropdown-item">Youtuber</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/influencer/tiktoker/" class="dropdown-item">Tiktoker</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/influencer/afreeca-tv/" class="dropdown-item">Afreeca TV</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown active">
+                                <a href="https://oppahub.com/c/travel/" class="nav-link dropdown-toggle">Travel</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="https://oppahub.com/c/travel/korea-travel/" class="dropdown-item">Korea</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/travel/japan/" class="dropdown-item">Japan</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oppahub.com/c/travel/global/" class="dropdown-item">Global</a>
                                     </li>
                                 </ul>
                             </li>
@@ -202,11 +202,11 @@
                             <i class="fa-regular fa-user"></i>
                             <div class="OppaUserMenu" style="border-color: #00ccdd; border-left-width: 3.5px; border-right-width: 3.5px; border-top-width: 3.5px; border-bottom-width: 3.5px; animation: OppaHubUserMenu 4s linear infinite alternate both;">
 	                        	<ul style="padding-left: 0rem;">
-	                        		<li><a href="https://oppahub.com/my-account/"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
-	                        		<li><a href="https://oppahub.com/my-account/"><i class="fa-solid fa-inbox"></i>&nbsp;Inbox</a></li>
-	                        		<li><a href="https://oppahub.com/my-account/"><i class="fa-solid fa-gear"></i>&nbsp;Settings</a></li>
-	                        		<li><a href="https://oppahub.com/11_inquiry_report/"><i class="fa-solid fa-question"></i>&nbsp;Help</a></li>
-	                        		<li><a href="https://oppahub.com/member-logout/"><i class="fa-solid fa-sign-out"></i>&nbsp;Sign Out</a></li>
+	                        		<li><a href="https://oppahub.com/under-maintenance/"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
+	                        		<li><a href="https://oppahub.com/under-maintenance/"><i class="fa-solid fa-inbox"></i>&nbsp;Inbox</a></li>
+	                        		<li><a href="https://oppahub.com/under-maintenance/"><i class="fa-solid fa-gear"></i>&nbsp;Settings</a></li>
+	                        		<li><a href="https://oppahub.com/under-maintenance/"><i class="fa-solid fa-question"></i>&nbsp;Help</a></li>
+	                        		<li><a href="https://oppahub.com/under-maintenance/"><i class="fa-solid fa-sign-out"></i>&nbsp;Sign Out</a></li>
 	                        	</ul>
 	                        </div>
                         </button>
@@ -220,110 +220,109 @@
 
 
         <!-- canvas menu  -->
-    <div class="canvas-menu d-flex align-items-end flex-column">
-        <button class="btn-close" aria-label="Close" type="button"></button>
+        <div class="canvas-menu d-flex align-items-end flex-column">
+            <button class="btn-close" aria-label="Close" type="button"></button>
 
-        <div class="logo">
-            <div class="oppahub">
-                <span contenteditable="true">Oppa</span>
-                <span contenteditable="true">Hub</span>
+            <div class="logo">
+                <div class="oppahub">
+                    <span contenteditable="true">Oppa</span>
+                    <span contenteditable="true">Hub</span>
+                </div>
             </div>
-        </div>
-        <nav>
-            <ul class="vertical-menu">  
-                <li class="active">
-                    <a href="https://oppahub.com/">Home</a>
-                </li>
+            <nav>
+                <ul class="vertical-menu">  
+                    <li class="active">
+                        <a href="https://oppahub.com/">Home</a>
+                    </li>
 
-                <li class="active">
-                    <a href="https://oppahub.com/">Channels</a>
-                    <ul class="submenu">
-                        <li><a href="https://oppahub.com/category/humor/">Humor</a></li>
-                        <li><a href="https://oppahub.com/category/news/">News</a></li>
-                        <li><a href="https://oppahub.com/category/music/">Music</a></li>
-                        <li><a href="https://oppahub.com/category/influencer/">Influencer</a></li>
-                    </ul>
-                </li>
-                <li class="active">
-                    <a href="https://oppahub.com/category/news/">News</a>
-                    <ul class="submenu">
-                        <li><a href="https://oppahub.com/category/news/korea/">Korea</a></li>
-                        <li><a href="https://oppahub.com/category/news/entertainment/">Entertainment</a></li>
-                        <li><a href="https://oppahub.com/category/news/sports-news/">Sports</a></li>
-                        <li><a href="https://oppahub.com/category/news/fashion/">Fashion</a></li>
-                    </ul>
-                </li>
-                <li class="active">
-                    <a href="https://oppahub.com/category/humor/">Humor</a>
-                    <ul class="submenu">
-                        <li><a href="https://oppahub.com/category/humor/issue/">Issue</a></li>
-                        <li><a href="https://oppahub.com/category/humor/stories/">Stories</a></li>
-                        <li><a href="https://oppahub.com/category/humor/reaction/">Reaction</a></li>
-                    </ul>
-                </li>
-                <li class="active">
-                    <a href="https://oppahub.com/category/netflix/">Netflix</a>
-                    <ul class="submenu">
-                        <li><a href="https://oppahub.com/category/netflix/tv-shows/">TV Shows</a></li>
-                        <li><a href="https://oppahub.com/category/netflix/movies/">Movies</a></li>
-                        <li><a href="https://oppahub.com/category/netflix/drama/">Drama</a></li>
-                        <li><a href="https://oppahub.com/category/netflix/anime/">Anime</a></li>
-                    </ul>
-                </li>
-                <li class="active">
-                    <a href="https://oppahub.com/category/celeb/">Celeb</a>
-                    <ul class="submenu">
-                        <li><a href="https://oppahub.com/category/celeb/artist/">Artist</a></li>
-                        <li><a href="https://oppahub.com/category/celeb/actor/">Actor</a></li>
-                        <li><a href="https://oppahub.com/category/celeb/entertainer/">Entertainer</a></li>
-                        <li><a href="https://oppahub.com/category/celeb/sports/">Sports</a></li>
-                    </ul>
-                </li>
-                <li class="active">
-                    <a href="https://oppahub.com/category/music/">Music</a>
-                    <ul class="submenu">
-                        <li><a href="https://oppahub.com/category/music/k-pop/">K-pop</a></li>
-                        <li><a href="https://oppahub.com/category/music/j-pop/">J-pop</a></li>
-                        <li><a href="https://oppahub.com/category/music/others/">Others</a></li>
-                    </ul>
-                </li>
-                <li class="active">
-                    <a href="https://oppahub.com/category/influencer/">Influencer</a>
-                    <ul class="submenu">
-                        <li><a href="https://oppahub.com/category/influencer/youtuber/">Youtuber</a></li>
-                        <li><a href="https://oppahub.com/category/influencer/tiktoker/">Tiktoker</a></li>
-                        <li><a href="https://oppahub.com/category/influencer/afreeca-tv/">Afreeca TV</a></li>
-                    </ul>
-                </li>
+                    <li class="active">
+                        <a href="https://oppahub.com/">Channels</a>
+                        <ul class="submenu">
+                            <li><a href="https://oppahub.com/c/humor/">Humor</a></li>
+                            <li><a href="https://oppahub.com/c/news/">News</a></li>
+                            <li><a href="https://oppahub.com/c/music/">Music</a></li>
+                            <li><a href="https://oppahub.com/c/influencer/">Influencer</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="https://oppahub.com/c/news/">News</a>
+                        <ul class="submenu">
+                            <li><a href="https://oppahub.com/c/news/korea/">Korea</a></li>
+                            <li><a href="https://oppahub.com/c/news/entertainment/">Entertainment</a></li>
+                            <li><a href="https://oppahub.com/c/news/sports-news/">Sports</a></li>
+                            <li><a href="https://oppahub.com/c/news/fashion/">Fashion</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="https://oppahub.com/c/humor/">Humor</a>
+                        <ul class="submenu">
+                            <li><a href="https://oppahub.com/c/humor/issue/">Issue</a></li>
+                            <li><a href="https://oppahub.com/c/humor/stories/">Stories</a></li>
+                            <li><a href="https://oppahub.com/c/humor/reaction/">Reaction</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="https://oppahub.com/c/netflix/">Netflix</a>
+                        <ul class="submenu">
+                            <li><a href="https://oppahub.com/c/netflix/tv-shows/">TV Shows</a></li>
+                            <li><a href="https://oppahub.com/c/netflix/movies/">Movies</a></li>
+                            <li><a href="https://oppahub.com/c/netflix/drama/">Drama</a></li>
+                            <li><a href="https://oppahub.com/c/netflix/anime/">Anime</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="https://oppahub.com/c/celeb/">Celeb</a>
+                        <ul class="submenu">
+                            <li><a href="https://oppahub.com/c/celeb/artist/">Artist</a></li>
+                            <li><a href="https://oppahub.com/c/celeb/actor/">Actor</a></li>
+                            <li><a href="https://oppahub.com/c/celeb/entertainer/">Entertainer</a></li>
+                            <li><a href="https://oppahub.com/c/celeb/sports/">Sports</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="https://oppahub.com/c/music/">Music</a>
+                        <ul class="submenu">
+                            <li><a href="https://oppahub.com/c/music/k-pop/">K-pop</a></li>
+                            <li><a href="https://oppahub.com/c/music/j-pop/">J-pop</a></li>
+                            <li><a href="https://oppahub.com/c/music/others/">Others</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="https://oppahub.com/c/influencer/">Influencer</a>
+                        <ul class="submenu">
+                            <li><a href="https://oppahub.com/c/influencer/youtuber/">Youtuber</a></li>
+                            <li><a href="https://oppahub.com/c/influencer/tiktoker/">Tiktoker</a></li>
+                            <li><a href="https://oppahub.com/c/influencer/afreeca-tv/">Afreeca TV</a></li>
+                        </ul>
+                    </li>
 
-                <li class="active">
-                    <a href="https://oppahub.com/about_us/">About Us</a>
-                </li>
+                    <li class="active">
+                        <a href="https://oppahub.com/about_us/">About Us</a>
+                    </li>
 
-                <li class="active">
-                    <a href="https://oppahub.com/contact_us/">Contact Us</a>
-                </li>
+                    <li class="active">
+                        <a href="https://oppahub.com/contact_us/">Contact Us</a>
+                    </li>
 
+                </ul>
+            </nav>
+
+
+            <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/OppaHubs"><i class="fab fa-facebook-f" style="color : blue;"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://twitter.com/OppaHub"><i class="fab fa-twitter" style="color : blue;"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/oppahub_official/"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.youtube.com/channel/UCwyllhgwtFK54BsQhU9779A"><i class="fab fa-youtube" style="color : red;"></i></a>
+                </li>
             </ul>
-        </nav>
-
-
-        <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
-            <li class="list-inline-item">
-                <a href="https://www.facebook.com/OppaHubs"><i class="fab fa-facebook-f" style="color : blue;"></i></a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://twitter.com/OppaHub"><i class="fab fa-twitter" style="color : blue;"></i></a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://www.instagram.com/oppahub_official/"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://www.youtube.com/channel/UCwyllhgwtFK54BsQhU9779A"><i class="fab fa-youtube" style="color : red;"></i></a>
-            </li>
-        </ul>
-    </div>
-
+        </div>
         <!-- search pop up  -->
         <div class="search-popup">
             <div class="search-content">
@@ -337,10 +336,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
-                
-            </div>
-            
-    </div>
-
+            </div> 
+        </div>
     </header>
 </div>
