@@ -310,16 +310,16 @@
 
             <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
                 <li class="list-inline-item">
-                    <a href="https://www.facebook.com/OppaHubs"><i class="fab fa-facebook-f" style="color : blue;"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" style="color : blue;"></i></a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="https://twitter.com/OppaHub"><i class="fab fa-twitter" style="color : blue;"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter" style="color : blue;"></i></a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="https://www.instagram.com/oppahub_official/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="https://www.youtube.com/channel/UCwyllhgwtFK54BsQhU9779A"><i class="fab fa-youtube" style="color : red;"></i></a>
+                    <a href="https://www.youtube.com/channel/"><i class="fab fa-youtube" style="color : red;"></i></a>
                 </li>
             </ul>
         </div>
