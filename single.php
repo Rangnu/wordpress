@@ -4,7 +4,7 @@
     <div class="container-xl">
         <div class="row gy-4">
             <div id="primary" class="bigchunk" style="padding-left: 0; padding-right: 0;">
-                <main id="main" class="padding-10 rounded bordered">
+                <main id="main" class="rounded bordered">
 
                     <?php
                     $category = get_the_category();
@@ -36,8 +36,8 @@
                                  style="display:block; text-align:center;"
                                  data-ad-layout="in-article"
                                  data-ad-format="fluid"
-                                 data-ad-client="ca-pub-2390907231823910"
-                                 data-ad-slot="4591372731"></ins>
+                                 data-ad-client="deleted_for_privacy"
+                                 data-ad-slot="deleted_for_privacy"></ins>
                             <script>
                                  (adsbygoogle = window.adsbygoogle || []).push({});
                             </script>
@@ -167,7 +167,7 @@
                         <hr style="margin-bottom: 1px;">
                         <?php endwhile; ?>
                                         
-                        <div class="clearfix mb-3">
+                        <div class="clearfix mb-3 mt-2">
                             <form role="search" method="get" class="search-form" style="display: inline-flex;" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                                 <input type="search" class="form-control me-2" placeholder="Search..." style="width: 100%;" value="<?php echo get_search_query(); ?>" name="s" />
                                 <button type="submit" class="btn btn-secondary search icon-button">
