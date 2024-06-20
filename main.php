@@ -13,8 +13,8 @@
                             <div class="padding-10 rounded bordered">
                                 <div class="section-header">
                                     <h3 class="section-title">
-                                        <a href="https://oppahub.com/category/news/">Oppa's News</a>
-                                        <a href="https://oppahub.com/category/news/" title="button_to_link">
+                                        <a href="https://oppahub.com/c/news/">Oppa's News</a>
+                                        <a href="https://oppahub.com/c/news/" title="button_to_link">
                                             <button>&gt;</button>
                                         </a>
                                     </h3>
@@ -162,10 +162,10 @@
                             
 
                             <div class="padding-10 rounded bordered">
-                                <div class="section-header" onclick="window.location='/category/interesting/';">
+                                <div class="section-header" onclick="window.location='/c/interesting/';">
                                     <h3 class="section-title">
-                                        <a href="/category/interesting/">Interesting as fuck</a>
-                                        <a href="/category/interesting/" title="button_to_link">
+                                        <a href="/c/interesting/">Interesting as fuck</a>
+                                        <a href="/c/interesting/" title="button_to_link">
                                             <button>&gt;</button>
                                         </a>
                                     </h3>
@@ -303,8 +303,8 @@
                             <!-- display-horizon -->
                             <ins class="adsbygoogle"
                                  style="display:block"
-                                 data-ad-client="ca-pub-2390907231823910"
-                                 data-ad-slot="7693346087"
+                                 data-ad-client="deleted_for_privacy"
+                                 data-ad-slot="deleted_for_privacy"
                                  data-ad-format="auto"
                                  data-full-width-responsive="true"></ins>
                             <script>
