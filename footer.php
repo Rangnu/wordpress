@@ -5,8 +5,8 @@
                 <!-- 디스플레이-수평형 -->
                 <ins class="adsbygoogle"
                      style="display:block"
-                     data-ad-client="ca-pub-2390907231823910"
-                     data-ad-slot="7693346087"
+                     data-ad-client="deleted_for_privacy"
+                     data-ad-slot="deleted_for_privacy"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
                 <script>
